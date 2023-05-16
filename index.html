@@ -12,8 +12,8 @@
 <body>
     <div class="screen">
         <div class="search">
-            <input type="text" placeholder="Enter a city or country name">
-            <button><img src="Assests/search.png"></button>
+            <input type="text" id="searchtxt" placeholder="Enter a city or country name">
+            <button onclick="weatherUpdate(searchtxt.value)"><img src="Assests/search.png"></button>
         </div>
     </div>
     <div class="weather">
@@ -33,7 +33,7 @@
             <div class="col">
                 <img src="Assests/wind.png">
                 <div>
-                    <p class="Wind">20 km/h</p>
+                    <p class="wind">20 km/h</p>
                     <p>Wind Speed</p>
                 </div>
             </div>
@@ -41,6 +41,5 @@
     </div>
     <div></div>
     <div></div>
-
 </body>
 </html>
