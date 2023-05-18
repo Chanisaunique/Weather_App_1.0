@@ -5,41 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <link rel="shortcut icon" href="Assests/clear.png" type="image/x-icon">
     <link rel="stylesheet" href="main.css">
     <script src="myScripts.js"></script>
     
 </head>
 <body>
-    <div class="screen">
+    <div class="upperBox">
         <div class="search">
             <input type="text" id="searchtxt" placeholder="Enter a city or country name">
-            <button onclick="weatherUpdate(searchtxt.value)"><img src="Assests/search.png"></button>
+            <button id="sbtn" onclick="weatherUpdate(searchtxt.value)"><img src="Assests/search.png"></button>
         </div>
     </div>
+
     <div class="weather">
-        <img src="Assests/rain.png" class="weather-icon">
-        <h1 class="temp">22°C</h1>
-        <h2 class="city">New York</h2>
+        
+        <div>
+            <img src="Assests/drizzle.png" class="weather-icon">
+            <h1 class="temp">35°C</h1>
+            <h4>Feels like
+                <h5 class="feels">37°C</h5>
+            </h4>
+            
+            <h2 class="city">Panadura</h2>
+        </div>
+        
         <div class="details">
 
             <div class="col">
                 <img src="Assests/humidity.png">
                 <div>
-                    <p class="humidity">50%</p>
+                    <p class="humidity">60%</p>
                     <p>Humidity</p>
                 </div>
 
             </div>
+            
             <div class="col">
                 <img src="Assests/wind.png">
                 <div>
-                    <p class="wind">20 km/h</p>
+                    <p class="wind">15 km/h</p>
                     <p>Wind Speed</p>
                 </div>
             </div>
+            
         </div>
     </div>
-    <div></div>
-    <div></div>
+
+    
+        <div class="col">
+            <img src="/Assests/sunny-cloudy.png">
+            <!-- //cdn.weatherapi.com/weather/64x64/night/113.png -->
+            <div>
+                <p >Condition ⤵</p>
+                <p class="condition">Clear</p>
+            </div>
+        </div>
+    
+
+<script>
+    var input=document.getElementById("searchtxt");
+
+    input.addEventListener("keypress",function(event){
+    if(event.key === "Enter"){
+        event.preventDefault();
+        document.getElementById("sbtn").click();
+    }
+});
+</script>
+
 </body>
 </html>
