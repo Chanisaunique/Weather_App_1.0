@@ -1,6 +1,3 @@
-const apiKey="49a66178439b4560bd661234231605";
-const schtxt=document.querySelector("searchtxt");
-const weatherIcon=document.querySelector("weather-icon");
 
 async function weatherUpdate(city){
     const response=await fetch('http://api.weatherapi.com/v1/current.json?key='+ apiKey +'&q=' + city);
@@ -20,6 +17,15 @@ async function weatherUpdate(city){
 
    }else if(data.current.condition.text =="Partly cloudy"){
     weatherIcon.src = "//cdn.weatherapi.com/weather/64x64/night/116.png";
+
+   }else if(data.current.condition.text =="Sunny"){
+    weatherIcon.src = "//cdn.weatherapi.com/weather/64x64/day/113.png";
    }
-   
+   else if(data.current.condition.text =="Clear"){
+    weatherIcon.src = "//cdn.weatherapi.com/weather/64x64/night/113.png";
+   }
+   else if(data.current.condition.text =="Mist"){
+    weatherIcon.src = "//cdn.weatherapi.com/weather/64x64/night/143.png";
+   }
+
 }
