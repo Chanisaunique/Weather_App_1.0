@@ -1,22 +1,48 @@
 *{
-    margin: 0;
-    padding: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    box-sizing: border-box;
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    box-sizing: border-box; 
 }
 
 body{
     background: linear-gradient(100deg,#2c2c54,#474787);
-    
-    
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
 }
 
 .upperBox{
+    position: fixed;
     width: 100%;
     background: linear-gradient(120deg,#40407a,#706fd3);
     border-radius: 15px;
     padding: 40px 35px;
     text-align: center;
+    animation: upbxani 2s;
+}
+@keyframes upbxani{
+    from{
+        top: -30vh;
+    }
+    to{
+        top: 0;
+    }
+}
+.weather{
+    width: 90vw;
+    height: 60vh;
+    position: relative;
+    top: 20vh;
+    animation: weathermain 2s;
+}
+@keyframes weathermain{
+    from{
+        left: -25%;
+    }
+    to{
+        left: 0;
+    }
 }
 
 .search{
