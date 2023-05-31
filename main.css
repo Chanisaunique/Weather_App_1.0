@@ -28,7 +28,7 @@ body{
         top: -30vh;
     }
     to{
-        top: 0;
+        top: 0vh;
     }
 }
 .weather{
@@ -42,10 +42,10 @@ body{
 
 @keyframes weathermain{
     from{
-        bottom: -25vh;
+        top: -70vh;
     }
     to{
-        top: 35vh;
+        top: 25vh;
     }
 }
 
