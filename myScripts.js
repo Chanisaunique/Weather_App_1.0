@@ -17,19 +17,19 @@ async function weatherUpdate(city){
     document.querySelector(".condition").innerHTML= data.current.condition.text;
 
    if(data.current.condition.text =="Patchy rain possible"){
-    weathericon.src = "//cdn.weatherapi.com/weather/64x64/night/176.png";
+    i.class ="fa-solid fa-cloud-showers-heavy";
 
    }else if(data.current.condition.text =="Partly cloudy"){
-    weathericon.src = "//cdn.weatherapi.com/weather/64x64/night/116.png";
+    i.class = "fa-solid fa-clouds-sun";
 
    }else if(data.current.condition.text =="Sunny"){
-    weathericon.src = "//cdn.weatherapi.com/weather/64x64/day/113.png";
+    i.class = "fa-solid fa-sun";
    }
    else if(data.current.condition.text =="Clear"){
-    weathericon.src = "//cdn.weatherapi.com/weather/64x64/night/113.png";
+    i.class = "fa-regular fa-sun-bright";
    }
    else if(data.current.condition.text =="Mist"){
-    weathericon.src = "//cdn.weatherapi.com/weather/64x64/night/143.png";
+    i.class = "fa-sharp fa-solid fa-cloud-fog";
    }
 
 }
