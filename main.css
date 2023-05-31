@@ -72,9 +72,14 @@ body{
 
 /*---------------------------------Weather detials---------------------------------*/
 #cloud{
-    font-size: 13vw;
+    font-size: 12vw;
 }
+.winddetails #wind, #humidity{
+    color: #000;
+}
+
 .weather{
+    line-height: 1;
     position: absolute;
     justify-content: center;
     padding-top: 20px;
@@ -88,16 +93,16 @@ body{
     font-weight: 600;
 }
 .weather div .temp{
-    font-size: 4vw !important;
+    font-size: 6vw !important;
     font-weight: 1000;
 }
 .weather div .feelstext, .feels{
-    font-size: 2vw !important;
+    font-size: 2.2vw !important;
     font-weight: 600;
 }
 .weather div .city{
-    font-size: 3vw !important;
-    font-weight: 1000;
+    font-size: 4vw !important;
+    font-weight: 900;
 }
 .feelstext .feelstext{
     text-align: right;
@@ -108,4 +113,8 @@ body{
     text-align: left;
     margin-left: 40px;
     padding: 0;
+}
+.winddetails{
+    font-size: 2vw !important;
+    font-weight: 1000;
 }

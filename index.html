@@ -59,6 +59,8 @@
 
 
 <!--------------------------------Weather Body-------------------------------->
+<section id="currentweather">
+
 
     <div class="weather">
         <div class="details">
@@ -78,8 +80,35 @@
               </div>
 
             <p class="city">Panadura</p>
+
+            <div class="winddetails">
+                <div class="container text-center wdetails">
+                    <div class="row">
+                      <div class="col">
+                        <img id="humidity" src="Assests/humidity.png" alt="">
+                        <p class="humidtytext">15%</p>
+                      </div>
+                      <div class="col">
+                        <img id="wind" src="Assests/wind.png" alt="">
+                        <p class="windtext">18Km/h</p>
+                      </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col">
+                          <p class="humidty">Humidty</p>
+                        </div>
+                        <div class="col">
+                          <p class="wind speed">Wind Speed</p>
+                        </div>
+                      </div>
+                  </div>
+            </div>
+            
+
         </div>
     </div>
+</section>
 
 <script>
     var input=document.getElementById("searchtxt");
