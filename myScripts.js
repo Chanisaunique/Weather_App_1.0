@@ -1,7 +1,7 @@
 
-async function weatherUpdate(city){
+async function weatherUpdate(location){
     
-    const response=await fetch('http://api.weatherapi.com/v1/forecast.json?key='+ apiKey +'&q=' + city);
+    const response=await fetch('http://api.weatherapi.com/v1/forecast.json?key='+ apiKey +'&q=' + location);
     var data = await response.json();
 
     console.log(data);
