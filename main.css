@@ -12,11 +12,17 @@ body{
     background: url(Assests/sky.jpg) no-repeat fixed;
     background-size: 100% 100%;
 }
+/* ------------------------------------Search Area------------------------------------ */
+.fa-sharp{
+    font-size: 3vw;
+}
 
 .searcharea{
     z-index: 1;
     position: sticky;
     top: 0;
+    align-items: center;
+    justify-content: center;
     background: linear-gradient(90deg,#ffff,#000000);
     border-radius: 10px;
     padding: 10px;
@@ -29,7 +35,7 @@ body{
     outline: 0;
     background: linear-gradient(90deg,#ffff,#000000);
     color:#000;
-    padding: 10px 25px;
+    padding: 10px;
     height: 75px;
     width: 90%;
     border-radius: 15px;
@@ -37,17 +43,16 @@ body{
     font-size: 25px;
 }
 
-.searchbox button{
-    border: 0;
-    outline: 0;
-    border-radius: 15px;
-    background: linear-gradient(1000deg,#95a5a6,#ffff);
+.searchbox .btn{
+    border-radius: 100px;
+    color: #e0e1dd;
+    height: 70px;
+    width: 105px;
+    font-weight: 500;
+    font-size: 21px;
 }
 
-.searchbox img{
-    width: 70px;
-}
-
+/* ------------------------------------Navigation Bar------------------------------------ */
 .navigationbar{
     z-index: 1;
     position: sticky;
@@ -71,8 +76,11 @@ body{
 }
 
 /*---------------------------------Weather detials---------------------------------*/
-#cloud{
+#weathericon{
     font-size: 12vw;
+    height: 225.7px;
+    width: 225.7px;
+
 }
 .winddetails #wind, #humidity{
     color: #000;
@@ -118,3 +126,5 @@ body{
     font-size: 2vw !important;
     font-weight: 1000;
 }
+
+
