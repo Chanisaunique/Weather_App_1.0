@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap');
 *{
-    margin: 0;
-    padding: 0;
+
     font-family: 'Jura', sans-serif;
     box-sizing: border-box;
 }
 
 body{
-    margin: 0;
-    padding: 0;
+
     width: 100vw;
     height: 100vh;
     background: url(Assests/sky.jpg) no-repeat fixed;
@@ -33,7 +31,7 @@ body{
     color:#000;
     padding: 10px 25px;
     height: 75px;
-    width: 85%;
+    width: 90%;
     border-radius: 15px;
     margin: 10px;
     font-size: 25px;
