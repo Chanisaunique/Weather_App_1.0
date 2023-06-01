@@ -6,7 +6,6 @@
 }
 
 body{
-
     width: 100vw;
     height: 100vh;
     background: url(Assests/sky.jpg) no-repeat fixed;
@@ -83,7 +82,8 @@ body{
 
 /*---------------------------------Weather detials---------------------------------*/
 #weathericon{
-    font-size: 12vw;
+    height: 230px;
+    width: 230px;
 }
 
 .winddetails #wind, #humidity{
@@ -137,7 +137,7 @@ body{
 
 @media screen and(max-width:480px){
     *{
-        font-size: 15px;
+        font-size: 25px;
     }
 
     .searchbox input{

@@ -16,10 +16,11 @@
 <!---------------------------------Search bar--------------------------------->
 
 <body>
+    
     <div class="searcharea">
             <div class="searchbox">
                 <!-- <input type="text" id="searchtext" placeholder="Enter a city or country name"> -->
-                <input class="form-control form-control-lg" type="text" placeholder="Enter a city or country name" aria-label=".form-control-lg example">
+                <input id="searchtext" class="form-control form-control-lg" type="text" placeholder="Enter a city or country name" aria-label=".form-control-lg example">
                 <button id="sebtn" type="button" class="btn btn-outline-secondary btn-lg" onclick="weatherUpdate(searchtext.value)">Search</button>
             </div>
     </div>
@@ -59,7 +60,7 @@
     <div class="weather">
         <div class="details">
 
-            <i id="weathericon" class="fa-solid fa-cloud-showers-heavy"></i>
+            <img id="weathericon" src="Assests/rainy.png" >
             
             <p class="condition">Raining</p>
             <p class="temp">35°C</p>

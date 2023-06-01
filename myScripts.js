@@ -17,19 +17,19 @@ async function weatherUpdate(city){
     document.querySelector(".condition").innerHTML= data.current.condition.text;
 
    if(data.current.condition.text =="Patchy rain possible"){
-    i.class ="fa-solid fa-cloud-showers-heavy";
+    weathericon.src ="Assests/patchy-rain.png";
 
    }else if(data.current.condition.text =="Partly cloudy"){
-    i.class = "fa-solid fa-clouds-sun";
+    weathericon.src = "Assests/cloudy-day.png";
 
    }else if(data.current.condition.text =="Sunny"){
-    i.class = "fa-solid fa-sun";
+    weathericon.src = "Assests/sunny.png";
    }
    else if(data.current.condition.text =="Clear"){
-    i.class = "fa-regular fa-sun-bright";
+    weathericon.src = "Assests/clear.png";
    }
    else if(data.current.condition.text =="Mist"){
-    i.class = "fa-sharp fa-solid fa-cloud-fog";
+    weathericon.src = "Assests/misty.png";
    }
 
 }
