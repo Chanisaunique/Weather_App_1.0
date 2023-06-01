@@ -22,7 +22,7 @@
                 <!-- <input type="text" id="searchtext" placeholder="Enter a city or country name"> -->
                 <input id="searchtext" class="form-control form-control-lg" type="text" placeholder="Enter a city or country name" aria-label=".form-control-lg example">
                 <button id="sebtn" type="button" class="btn btn-outline-secondary btn-lg" onclick="weatherUpdate(searchtext.value)">Search</button>
-                <button id="geobtn" type="button" class="btn btn-outline-secondary btn-lg"> <img id="btnimg" src="Assests/location.png"> </button>
+                <button id="geobtn" type="button" class="btn btn-outline-secondary btn-lg" onclick="geoLocation()"> <img id="btnimg" src="Assests/location.png"> </button>
             </div>
     </div>
 
@@ -36,7 +36,7 @@
                     <div class="navpane">
                         <ul class="nav nav-pills nav-fill">
                             <li class="nav-item">
-                            <a class="nav-link active"href="#home">Home</a>
+                            <a class="nav-link"href="#home">Home</a>
                             </li>
                             <li class="nav-item">
                             <a class="nav-link" href="#forecast">Weather Forecast</a>

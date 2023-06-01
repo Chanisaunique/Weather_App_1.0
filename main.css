@@ -38,8 +38,8 @@ body{
         background: linear-gradient(90deg,#ffff,#000000);
         color: #000;
         padding: 10px;
-        height: 75px;
-        width: 1160px;
+        min-height: 75px;
+        max-width: 1160px;
         border-radius: 15px;
         margin: 10px;
         font-size: 25px;

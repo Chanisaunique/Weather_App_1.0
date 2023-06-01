@@ -31,5 +31,19 @@ async function weatherUpdate(city){
    else if(data.current.condition.text =="Mist"){
     weathericon.src = "Assests/misty.png";
    }
-
 }
+
+async function geoLocation(){
+    const successCall=(location)=>{
+        console.log(location);
+        console.log(location);
+        weatherUpdate(location.coords.latitude+","+location.coords.longitude);
+    }
+    const errorCall=(error)=>{
+        console.error(error);
+    }
+    var dataset=navigator.geolocation.getCurrentPosition(successCall,errorCall);
+}
+geoLocation();
+
+
