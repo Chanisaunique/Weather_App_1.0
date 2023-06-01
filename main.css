@@ -12,6 +12,7 @@ body{
     background: url(Assests/sky.jpg) no-repeat fixed;
     background-size: 100% 100%;
 }
+
 /* ------------------------------------Search Area------------------------------------ */
 .fa-sharp{
     font-size: 3vw;
@@ -32,26 +33,29 @@ body{
 }
 
 .searchbox input{
-    position: relative;
-    border: 0;
-    outline: 0;
-    background: linear-gradient(90deg,#ffff,#000000);
-    color:#000;
-    padding: 10px;
-    height: 75px;
-    width: 1160px;
-    border-radius: 15px;
-    margin: 10px;
-    font-size: 25px;
+        position: relative;
+        border: 0;
+        outline: 0;
+        background: linear-gradient(90deg,#ffff,#000000);
+        color: #000;
+        padding: 10px;
+        height: 75px;
+        width: 1160px;
+        border-radius: 15px;
+        margin: 10px;
+        font-size: 25px;
+        left: 17vw;
 }
 
-.searchbox .btn{
+.searchbox .btn {
+    position: absolute;
+    left: 79%;
     border-radius: 100px;
     color: #e0e1dd;
     height: 70px;
-    width: 105px;
     font-weight: 500;
     font-size: 21px;
+    top: 20%;
 }
 
 /* ------------------------------------Navigation Bar------------------------------------ */
@@ -131,3 +135,13 @@ body{
 }
 
 
+@media screen and(max-width:480px){
+    *{
+        font-size: 15px;
+    }
+
+    .searchbox input{
+        height: 45px;
+        width: 300pxpx;
+    }
+}
