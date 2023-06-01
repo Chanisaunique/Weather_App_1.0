@@ -72,6 +72,15 @@ body{
     width: 65px;
 }
 
+#lightbtn{
+    position: absolute;
+    left: 95%;
+    bottom: 5px;
+    border: 0;
+    height: 65px;
+    width: 65px;
+}
+
 /* ------------------------------------Navigation Bar------------------------------------ */
 .navigationbar{
     z-index: 1;
