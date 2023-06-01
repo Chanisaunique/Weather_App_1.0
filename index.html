@@ -42,10 +42,10 @@
                             <a class="nav-link" href="#forecast">Weather Forecast</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="#weather">Weather History</a>
+                            <a class="nav-link" href="#">Weather History</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
+                            <a class="nav-link" href="#">About</a>
                             </li>
                         </ul>
                     </div>
@@ -55,14 +55,12 @@
     </div>    
 
 
-<!--------------------------------Weather Body-------------------------------->
-<section id="home">
+<!--------------------------------Current Weather Body-------------------------------->
 
-    <div class="weather">
+
+    <div class="weather" id="home">
         <div class="details">
-
             <img id="weathericon" src="Assests/rainy.png" >
-            
             <p class="condition">Raining</p>
             <p class="temp">35°C</p>
 
@@ -102,17 +100,59 @@
                       </div>
                   </div>
             </div>
-            
-
         </div>
     </div>
-</section>
+<br>
+<!--------------------------------Forecast Weather Body-------------------------------->
 
 
-<section id="forecast">
 
-</section>
-
+<div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+   
+<!--------------------------------Script-------------------------------->
 <script>
     var input=document.getElementById("searchtext");
 

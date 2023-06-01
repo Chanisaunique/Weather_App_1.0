@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap');
-*{
 
+*{
     font-family: 'Jura', sans-serif;
     box-sizing: border-box;
 }
@@ -107,11 +107,11 @@ body{
 
 .weather{
     line-height: 1;
-    position: absolute;
+    position: relative;
     justify-content: center;
     padding-top: 20px;
     margin: 0;
-    height: 100vh;
+    /* height: 100vh; */
     width: 100vw;
     text-align: center;
 }
@@ -149,14 +149,6 @@ body{
     font-weight: 1000;
 }
 
-
-@media screen and(max-width:480px){
-    *{
-        font-size: 25px;
-    }
-
-    .searchbox input{
-        height: 45px;
-        width: 300pxpx;
-    }
+.mydiv{
+    background-color: aqua;
 }
