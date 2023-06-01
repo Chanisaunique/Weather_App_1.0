@@ -24,10 +24,9 @@
                 <button id="sebtn" type="button" class="btn btn-outline-secondary btn-lg" onclick="weatherUpdate(searchtext.value)">Search</button>
                 <button id="geobtn" type="button" class="btn btn-outline-secondary btn-lg" onclick="geoLocation()"> <img id="btnimg" src="Assests/location.png"> </button>
                 
-                <button id="lightbtn" type="button" class="btn btn-outline-secondary btn-lg" > <img id="btnimg" src="Assests/misty.png"> </button>
+                <!-- <button id="lightbtn" type="button" class="btn btn-outline-secondary btn-lg" > <img id="lbtnimg" src="Assests/dark.png"> </button> -->
             </div>
     </div>
-
 
 
 <!------------------------------Navigation Pane------------------------------>
@@ -58,7 +57,7 @@
 
 
 <!--------------------------------Current Weather Body-------------------------------->
-
+<section id="home">
 
     <div class="weather" id="home">
         <div class="details">
@@ -104,10 +103,31 @@
             </div>
         </div>
     </div>
+</section>
 <br>
 <!--------------------------------Forecast Weather Body-------------------------------->
+<section id="forecastsection"></section>
 
-   
+<div class="forecastweather">
+    <p id="titlef">Next 4 Days Forecast</p>
+    <br><br><br><br>
+
+    <div class="container text-center" id="forecastbox">
+        <div class="row">
+          <div class="col">
+            Column
+          </div>
+          <div class="col">
+            Column
+          </div>
+          <div class="col">
+            Column
+          </div>
+        </div>
+      </div>
+    
+</div>
+
 <!--------------------------------------Script----------------------------------------->
 <script>
     var input=document.getElementById("searchtext");
