@@ -44,12 +44,10 @@ async function weatherUpdate(city){
       console.log("The past 7 date is " + past7day); 
 
 
-    const response1=await fetch('http://api.weatherapi.com/v1/history.json?key='+ apiKey +'&q=' + city +'&dt='+past7day +'&end_dt='+currentDate);
-    var history = await response1.json();
+    const historyres=await fetch('http://api.weatherapi.com/v1/history.json?key='+ apiKey +'&q=' + city +'&dt='+past7day +'&end_dt='+currentDate);
+    var history = await historyres.json();
 
     console.log(history);
-
-
 
     document.querySelector(".city").innerHTML= data.location.name;
     document.querySelector(".temp").innerHTML= Math.round(data.current.temp_c) +"°C";
@@ -117,7 +115,6 @@ async function weatherUpdate(city){
         day1icon.src ="Assests/light-rain.png";
        }
 
-    //    --------------------Day 2 forecast--------------------
 
        if(data.forecast.forecastday[2].day.condition.text =="Patchy rain possible"){
         day2icon.src ="Assests/patchy-rain.png";
