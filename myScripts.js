@@ -137,8 +137,21 @@ async function weatherUpdate(city){
        }else if(data.forecast.forecastday[2].day.condition.text =="Light rain shower"){
         day2icon.src ="Assests/light-rain.png";
        }
+
+
+
+    // -----------------------Forecast Details-----------------------------------
+    for (let i = 0; i < 7; i++) {
+        document.querySelector(".hday"+[i+1]).innerHTML= history.forecast.forecastday[i].date;
+        document.querySelector(".hday"+[i+1]+"cond").innerHTML= history.forecast.forecastday[i].day.condition.text;
+        document.querySelector(".hday"+[i+1]+"temp").innerHTML= Math.round(history.forecast.forecastday[i].day.avgtemp_c) +"°C";
+        document.querySelector(".hday"+[i+1]+"hum").innerHTML= Math.round(history.forecast.forecastday[i].day.avghumidity) +"%";
+        document.querySelector(".hday"+[i+1]+"wind").innerHTML= Math.round(history.forecast.forecastday[i].day.avgvis_km) +"km/h";
+        
+    }
 }
 
+      // -----------------------GeoLocation GET-----------------------------------
 async function geoLocation(){
     const successCall=(location)=>{
         console.log(location);
