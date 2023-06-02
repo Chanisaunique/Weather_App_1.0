@@ -4,7 +4,7 @@ const apiKey="49a66178439b4560bd661234231605";
 
 async function weatherUpdate(city){
     
-    const response=await fetch('http://api.weatherapi.com/v1/forecast.json?key='+ apiKey +'&q=' + city);
+    const response=await fetch('http://api.weatherapi.com/v1/forecast.json?key='+ apiKey +'&q=' + city +'&days=5');
     var data = await response.json();
 
     console.log(data);
@@ -15,6 +15,15 @@ async function weatherUpdate(city){
     document.querySelector(".windtext").innerHTML= data.current.wind_kph + " km/h";
     document.querySelector(".feels").innerHTML= data.current.feelslike_c +"°C";
     document.querySelector(".condition").innerHTML= data.current.condition.text;
+
+    // -----------------------Forecast Details-----------------------
+    document.querySelector(".day1").innerHTML= data.forecast.forecastday[1].date;
+    document.querySelector(".day2").innerHTML= data.forecast.forecastday[2].date;
+
+
+
+
+
 
    if(data.current.condition.text =="Patchy rain possible"){
     weathericon.src ="Assests/patchy-rain.png";

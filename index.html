@@ -37,10 +37,10 @@
                     <div class="navpane">
                         <ul class="nav nav-pills nav-fill">
                             <li class="nav-item">
-                            <a class="nav-link"href="#home">Home</a>
+                            <a class="nav-link"href="#">Home</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="#forecast">Weather Forecast</a>
+                            <a class="nav-link" href="#forecastsection">Weather Forecast</a>
                             </li>
                             <li class="nav-item">
                             <a class="nav-link" href="#">Weather History</a>
@@ -106,27 +106,71 @@
 </section>
 <br>
 <!--------------------------------Forecast Weather Body-------------------------------->
-<section id="forecastsection"></section>
+<section id="forecastsection">
 
 <div class="forecastweather">
-    <p id="titlef">Next 4 Days Forecast</p>
+    <p id="titlef">Weather Forecast</p>
     <br><br><br><br>
 
     <div class="container text-center" id="forecastbox">
-        <div class="row">
+
+        <div class="row" id="daysrow">
           <div class="col">
-            Column
+            <p class="day1">Day 1</p> 
           </div>
           <div class="col">
-            Column
+            <p class="day2">Day </p> 
           </div>
-          <div class="col">
-            Column
-          </div>
+          
         </div>
+
+        <!-- ---------------------------------------------- -->
+        <br>
+        <div class="row" id="iconrow">
+            <div class="col" id="icon1">
+                <img src="Assests/cloudy-512.png" id="day1icon">
+            </div>
+            <div class="col" id="icon2">
+                <img src="Assests/cloudy-512.png" id="day2icon">
+            </div>
+            
+          </div>
+        <!-- ---------------------------------------------- -->
+        <br>
+        <div class="row" id="temprow">
+            <div class="col">
+                <p class="day1temp">35°C</p>
+            </div>
+            <div class="col">
+                <p class="day2temp">35°C</p>
+            </div>
+            
+          </div>
+          <!-- ---------------------------------------------- -->
+        
+        <div class="row" id="humidityrow">
+            <div class="col">
+                <p class="day1hum">57%</p>
+            </div>
+            <div class="col">
+                <p class="day2hum">57%</p>
+            </div>
+            
+          </div>
+          <!-- ---------------------------------------------- -->
+        
+        <div class="row" id="windrow">
+            <div class="col">
+                <p class="day1wind">17km/h</p>
+            </div>
+            <div class="col">
+                <p class="day2wind">17km/h</p>
+            </div>
+            
+          </div>
       </div>
-    
 </div>
+</section>
 
 <!--------------------------------------Script----------------------------------------->
 <script>

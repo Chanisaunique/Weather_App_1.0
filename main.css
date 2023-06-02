@@ -18,7 +18,7 @@ body{
 }
 
 .searcharea{
-    z-index: 1;
+    z-index: 9;
     position: sticky;
     top: 0;
     align-items: center;
@@ -94,7 +94,7 @@ body{
 
 /* ------------------------------------Navigation Bar------------------------------------ */
 .navigationbar{
-    z-index: 1;
+    z-index: 10;
     position: sticky;
     top: 115px;
     left: 5%;
@@ -119,10 +119,6 @@ body{
 #weathericon{
     height: 230px;
     width: 230px;
-}
-
-.winddetails #wind, #humidity{
-    color: #000;
 }
 
 .weather{
@@ -173,22 +169,47 @@ body{
 
 .forecastweather{
     position: relative;
-    padding: 0;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 0; 
     border: 0;
     margin: 0;
-    height: 950px;
+    height: 600px;
     width: 100vw;
-    background-color: antiquewhite;
+    background-color: white;
 }
 #titlef{
     position: absolute;
     align-items: center;
     text-align: center;
     justify-content: center;
-    left: 42vw;
+    left: 41vw;
     font-size: 45px;
     font-weight: 800;
 }
 #forecastbox{
     position: relative;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+
+#daysrow {
+    font-size: 40px;
+    font-weight: 600;
+}
+#temprow{
+    font-size: 45px;
+    font-weight: 900;
+}
+#humidityrow, #windrow{
+    font-size: 40px;
+    font-weight: 500;
+}
+
+#day1icon, #day2icon, #day3icon,#day4icon{
+    max-height: 70px;
+    max-width: 70px;
 }
