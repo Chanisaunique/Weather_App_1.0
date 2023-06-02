@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="Assests/fontAwesome/css/all.css">
 </head>
 
-<!---------------------------------Search bar--------------------------------->
+<!-----------------------------------Search bar------------------------------------->
 
 <body>
     
@@ -29,7 +29,7 @@
     </div>
 
 
-<!------------------------------Navigation Pane------------------------------>
+<!----------------------------------Navigation Pane---------------------------------->
     <div class="navigationbar">
         <div class="container text-center">
             <div class="row">
@@ -43,7 +43,7 @@
                             <a class="nav-link" href="#forecastsection">Weather Forecast</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="#">Weather History</a>
+                            <a class="nav-link" href="#historysection">Weather History</a>
                             </li>
                             <li class="nav-item">
                             <a class="nav-link" href="#">About</a>
@@ -56,8 +56,8 @@
     </div>    
 
 
-<!--------------------------------Current Weather Body-------------------------------->
-<section id="home">
+<!----------------------------------Current Weather Body---------------------------------->
+<section id="home"></section>
 
     <div class="weather" id="home">
         <div class="details">
@@ -82,11 +82,11 @@
                 <div class="container text-center wdetails">
                     <div class="row">
                       <div class="col">
-                        <img id="humidity" src="Assests/humidity.png" alt="">
+                        <img id="humidity" src="Assests/humidity.png">
                         <p class="humidtytext">15%</p>
                       </div>
                       <div class="col">
-                        <img id="wind" src="Assests/wind.png" alt="">
+                        <img id="wind" src="Assests/wind.png">
                         <p class="windtext">18Km/h</p>
                       </div>
                     </div>
@@ -103,17 +103,18 @@
             </div>
         </div>
     </div>
-</section>
-<br>
+    
+
 <!--------------------------------Forecast Weather Body-------------------------------->
-<section id="forecastsection">
+<section id="forecastsection"></section>
 
 <div class="forecastweather">
+  <br><br><br><br><br><br><br><br>
     <p id="titlef">Weather Forecast</p>
     <br><br><br><br>
 
     <div class="container text-center" id="forecastbox">
-
+      <br><br>
         <div class="row" id="daysrow">
           <div class="col">
             <p class="day1">Day 1</p> 
@@ -124,7 +125,7 @@
           
         </div>
 
-        <!-- ---------------------------------------------- -->
+        <!-- ------------------------------------------------>
         <br>
         <div class="row" id="iconrow">
             <div class="col" id="icon1">
@@ -145,7 +146,7 @@
             </div>
             
           </div>
-        <!-- ---------------------------------------------- -->
+        <!-------------------------------------------------->
         <br>
         <div class="row" id="temprow">
             <div class="col">
@@ -156,7 +157,7 @@
             </div>
             
           </div>
-          <!-- ---------------------------------------------- -->
+          <!-------------------------------------------------->
         
         <div class="row" id="humidityrow">
             <div class="col">
@@ -167,7 +168,7 @@
             </div>
             
           </div>
-          <!-- ---------------------------------------------- -->
+          <!-------------------------------------------------->
         
         <div class="row" id="windrow">
             <div class="col">
@@ -180,9 +181,169 @@
           </div>
       </div>
 </div>
-</section>
 
-<!--------------------------------------Script----------------------------------------->
+
+<!--------------------------------Weather History Body-------------------------------->
+<section id="historysection"></section>
+<br><br><br><br>
+<div class="forecastweather">
+  <br><br>
+    <p id="titleh">Past 7 Days Weather History</p>
+    <br><br><br><br>
+
+    <div class="container text-center" id="forecastbox">
+      <br><br>
+        <div class="row" id="daysrow">
+          <div class="col">
+            <p class="hday1">Day 1</p>
+          </div>
+          <div class="col">
+            <p class="hday2">Day 2 </p> 
+          </div>
+          <div class="col">
+            <p class="hday3">Day 3</p> 
+          </div>
+          <div class="col">
+            <p class="hday4">Day 4</p> 
+          </div>
+          <div class="col">
+            <p class="hday5">Day 5</p>
+          </div>
+          <div class="col">
+            <p class="hday6">Day 6 </p>
+          </div>
+          <div class="col">
+            <p class="hday7">Day 7 </p>
+          </div>
+        </div>
+
+        <!-- ------------------------------------------------>
+        <br>
+        <div class="row" id="iconrow">
+          <div class="col" id="icon1">
+            <img src="Assests/cloudy-512.png" id="hday1icon">
+          </div>
+          <div class="col" id="icon2">
+            <img src="Assests/cloudy-512.png" id="hday2icon">
+          </div>
+          <div class="col" id="icon3">
+            <img src="Assests/cloudy-512.png" id="hday3icon">
+          </div>
+          <div class="col" id="icon4">
+            <img src="Assests/cloudy-512.png" id="hday4icon">
+          </div>
+          <div class="col" id="icon5">
+            <img src="Assests/cloudy-512.png" id="hday5icon">
+          </div>
+          <div class="col" id="icon6">
+            <img src="Assests/cloudy-512.png" id="hday6icon">
+          </div>
+          <div class="col" id="icon7">
+            <img src="Assests/cloudy-512.png" id="hday7icon">
+          </div>
+        </div>
+        <!-------------------------------------------------->
+          <div class="row" id="condrow">
+            <div class="col">
+              <p class="hday1cond">Raining</p>
+            </div>
+            <div class="col">
+              <p class="hday2cond">Sunny</p>
+            </div>
+            <div class="col">
+              <p class="hday3cond">Raining</p>
+            </div>
+            <div class="col">
+              <p class="hday4cond">Sunny</p>
+            </div>
+            <div class="col">
+              <p class="hday5cond">Raining</p>
+            </div>
+            <div class="col">
+              <p class="hday6cond">Sunny</p>
+            </div>
+            <div class="col">
+              <p class="hday7cond">Raining</p>
+            </div>
+          </div>
+        <!-------------------------------------------------->
+        <br>
+          <div class="row" id="temprow">
+            <div class="col">
+              <p class="hday1temp">35°C</p>
+            </div>
+            <div class="col">
+              <p class="hday2temp">35°C</p>
+            </div>
+            <div class="col">
+              <p class="hday3temp">35°C</p>
+            </div>
+            <div class="col">
+              <p class="hday4temp">35°C</p>
+            </div>
+            <div class="col">
+              <p class="hday5temp">35°C</p>
+            </div>
+            <div class="col">
+              <p class="hday6temp">35°C</p>
+            </div>
+            <div class="col">
+              <p class="hday7temp">35°C</p>
+            </div>
+          </div>
+          <!-------------------------------------------------->
+        <div class="row" id="humidityrow">
+          <div class="col">
+            <p class="hday1hum">57%</p>
+          </div>
+          <div class="col">
+            <p class="hday2hum">57%</p>
+          </div>
+          <div class="col">
+            <p class="hday3hum">57%</p>
+          </div>
+          <div class="col">
+            <p class="hday4hum">57%</p>
+          </div>
+          <div class="col">
+            <p class="hday5hum">57%</p>
+          </div>
+          <div class="col">
+            <p class="hday6hum">57%</p>
+          </div>
+          <div class="col">
+            <p class="hday7hum">57%</p>
+          </div>
+        </div>
+        <!----------------------------------------------------->
+        <div class="row" id="windrow">
+          <div class="col">
+            <p class="hday1wind">17km/h</p>
+          </div>
+          <div class="col">
+            <p class="hday2wind">17km/h</p>
+          </div>
+          <div class="col">
+            <p class="hday3wind">17km/h</p>
+          </div>
+          <div class="col">
+            <p class="hday4wind">17km/h</p>
+          </div>
+          <div class="col">
+            <p class="hday5wind">17km/h</p>
+          </div>
+          <div class="col">
+            <p class="hday6wind">17km/h</p>
+          </div>
+          <div class="col">
+            <p class="hday7wind">17km/h</p>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+<!---------------------------------Script----------------------------------->
 <script>
     var input=document.getElementById("searchtext");
 

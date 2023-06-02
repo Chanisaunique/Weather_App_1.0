@@ -9,8 +9,6 @@ async function weatherUpdate(city){
 
     console.log(data);
 
-
-
     // Current Date GET
     const date = new Date();
 
@@ -47,9 +45,9 @@ async function weatherUpdate(city){
 
 
     const response1=await fetch('http://api.weatherapi.com/v1/history.json?key='+ apiKey +'&q=' + city +'&dt='+past7day +'&end_dt='+currentDate);
-    var data1 = await response1.json();
+    var history = await response1.json();
 
-    console.log(data1);
+    console.log(history);
 
 
 

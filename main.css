@@ -6,9 +6,14 @@
 }
 
 body{
-    width: 100vw;
-    height: 100vh;
-    background: url(Assests/sky.jpg) no-repeat fixed;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    left: 0;
+    top: 0;
+    
+    /* background: url(Assests/sky.jpg) no-repeat fixed; */
+    background: linear-gradient(170deg,#457B9D,#F1FAEE);
     background-size: 100% 100%;
 }
 
@@ -23,9 +28,9 @@ body{
     top: 0;
     align-items: center;
     justify-content: center;
-    width: 100vw;
+    width: 99vw;
     height: 115px;
-    background: linear-gradient(90deg,#ffff,#000000);
+    background: linear-gradient(270deg,#1D3557,#CAF0F8);
     border-radius: 10px;
     padding: 10px;
     animation: upbxani 2s;
@@ -35,7 +40,7 @@ body{
         position: relative;
         border: 0;
         outline: 0;
-        background: linear-gradient(90deg,#ffff,#000000);
+        background: linear-gradient(90deg,#0077B6,#00B4D8);
         color: #000;
         padding: 10px;
         min-height: 75px;
@@ -48,7 +53,7 @@ body{
 
 .searchbox .btn{
     position: absolute;
-    left: 79%;
+    left: 80%;
     border-radius: 100px;
     color: #e0e1dd;
     height: 70px;
@@ -57,7 +62,7 @@ body{
     top: 20%;
 }
 #geobtn{
-    left: 85%;
+    left: 86%;
     border-radius: 10%;
     height: 70px;
     width: 70px;
@@ -98,7 +103,7 @@ body{
     position: sticky;
     top: 115px;
     left: 5%;
-    background: linear-gradient(90deg,#e0e1dd,#000000);
+    background: linear-gradient(90deg,#A8DADC,#1D3557);
     border-radius: 15px;
     padding: 10px 10px;
     width: 90%;
@@ -123,13 +128,16 @@ body{
 
 .weather{
     line-height: 1;
+    top: 0;
     position: relative;
     justify-content: center;
-    padding-top: 20px;
+    padding-top: 0px;
     margin: 0;
     /* height: 100vh; */
     width: 100vw;
+   
     text-align: center;
+    /* background: linear-gradient(90deg,#81b29a,#3d405b); */
 }
 
 .weather div .condition{
@@ -169,23 +177,25 @@ body{
 
 .forecastweather{
     position: relative;
+    height: 80vh;
+    width: 100vw;
     align-items: center;
     text-align: center;
     justify-content: center;
     padding: 0; 
     border: 0;
     margin: 0;
-    height: 600px;
+    height: 800px;
     width: 100vw;
-    background-color: white;
+    /* background: linear-gradient(180deg,#F1FAEE,#457B9D); */
 }
 #titlef{
     position: absolute;
     align-items: center;
     text-align: center;
     justify-content: center;
-    left: 41vw;
-    font-size: 45px;
+    left: 38vw;
+    font-size: 60px;
     font-weight: 800;
 }
 #forecastbox{
@@ -212,4 +222,20 @@ body{
 #day1icon, #day2icon, #day3icon,#day4icon{
     max-height: 70px;
     max-width: 70px;
+}
+
+/*---------------------------------Forecast history details---------------------------------*/
+#hday1icon, #hday2icon, #hday3icon,#hday4icon,#hday5icon,#hday6icon,#hday7icon{
+    max-height: 70px;
+    max-width: 70px;
+}
+
+#titleh{
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    left: 31vw;
+    font-size: 60px;
+    font-weight: 800;
 }
