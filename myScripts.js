@@ -18,7 +18,7 @@ async function weatherUpdate(city){
 
     let currentYear = date.getFullYear();
 
-    // we will display the date as DD-MM-YYYY
+    //display the date as DD-MM-YYYY
 
     let currentDate = `${currentYear}-${currentMonth}-${currentDay}`;
 
@@ -76,67 +76,114 @@ async function weatherUpdate(city){
         weathericon.src = "Assests/light-rain.png";
        }
 
-
     // -----------------------Forecast Details-----------------------------------
-    document.querySelector(".day1").innerHTML= data.forecast.forecastday[1].date;
-    document.querySelector(".day2").innerHTML= data.forecast.forecastday[2].date;
+    for (let i = 1; i < 3; i++) {
+        document.querySelector(".day"+[i]).innerHTML= data.forecast.forecastday[i].date;
+        document.querySelector(".day"+[i]+"cond").innerHTML= data.forecast.forecastday[i].day.condition.text;
+        document.querySelector(".day"+[i]+"temp").innerHTML= Math.round(data.forecast.forecastday[i].day.avgtemp_c) +"°C";
+        document.querySelector(".day"+[i]+"hum").innerHTML= Math.round(data.forecast.forecastday[i].day.avghumidity) +"%";
+        document.querySelector(".day"+[i]+"wind").innerHTML= Math.round(data.forecast.forecastday[i].day.avgvis_km) +"km/h";
+    }
 
-    document.querySelector(".day1cond").innerHTML= data.forecast.forecastday[1].day.condition.text;
-    document.querySelector(".day2cond").innerHTML= data.forecast.forecastday[2].day.condition.text;
 
-    document.querySelector(".day1temp").innerHTML= Math.round(data.forecast.forecastday[1].day.avgtemp_c) +"°C";
-    document.querySelector(".day2temp").innerHTML= Math.round(data.forecast.forecastday[2].day.avgtemp_c) +"°C";
+// array of condition texts
+var conditionTexts = [
+    "Patchy rain possible",
+    "Partly cloudy",
+    "Sunny",
+    "Clear",
+    "Mist",
+    "Heavy rain",
+    "Light rain shower",
+    "Thundery outbreaks possible"
+  ];
+  
+  //array of corresponding image file names
+  var imageFileNames = [
+    "patchy-rain.png",
+    "cloudy-day.png",
+    "sunny.png",
+    "clear.png",
+    "misty.png",
+    "rainy.png",
+    "light-rain.png",
+    "thunder.png"
 
-    document.querySelector(".day1hum").innerHTML= Math.round(data.forecast.forecastday[1].day.avghumidity) +"%";
-    document.querySelector(".day2hum").innerHTML= Math.round(data.forecast.forecastday[2].day.avghumidity) +"%";
+  ];
+  
 
-    document.querySelector(".day1wind").innerHTML= Math.round(data.forecast.forecastday[1].day.avgvis_km) +"km/h";
-    document.querySelector(".day2wind").innerHTML= Math.round(data.forecast.forecastday[2].day.avgvis_km) +"km/h";
-
-    if(data.forecast.forecastday[1].day.condition.text =="Patchy rain possible"){
-        day1icon.src ="Assests/patchy-rain.png";
+  
+  for (var i = 1; i <= 2; i++) {
+    // Get the condition text for the current day
+    var condition = data.forecast.forecastday[i].day.condition.text;
+    console.log(condition);
+  
+    // Find the index of the condition text in the array
+    var index = conditionTexts.indexOf(condition);
+    console.log(index);
+  
+    // Check if the condition text exists in the array
+    if (index !== -1) {
+      // Construct the image source by using the corresponding image file name
+      var imageSrc = "Assests/" + imageFileNames[index];
+      console.log(imageSrc);
     
-       }else if(data.forecast.forecastday[1].day.condition.text =="Partly cloudy"){
-        day1icon.src = "Assests/cloudy-day.png";
+      // Get the element based on the class name
+      var dayIcon = document.getElementsByName("day" + i + "icon");
+      console.log(dayIcon);
+  
+      // Set the image source to the dayIcon element
+      if (dayIcon.length > 0) {
+        dayIcon[0].src = imageSrc;
+      }
+    }
+  }
+
+
+    // if(data.forecast.forecastday[1].day.condition.text =="Patchy rain possible"){
+    //     day1icon.src ="Assests/patchy-rain.png";
     
-       }else if(data.forecast.forecastday[1].day.condition.text =="Sunny"){
-        day1icon.src = "Assests/sunny.png";
-       }
-       else if(data.forecast.forecastday[1].day.condition.text =="Clear"){
-        day1icon.src = "Assests/clear.png";
-       }
-       else if(data.forecast.forecastday[1].day.condition.text =="Mist"){
-        day1icon.src = "Assests/misty.png";
-
-       }else if(data.forecast.forecastday[1].day.condition.text =="Heavy rain"){
-        day1icon.src ="Assests/rainy.png";
-
-       }else if(data.forecast.forecastday[1].day.condition.text =="Light rain shower"){
-        day1icon.src ="Assests/light-rain.png";
-       }
-
-
-       if(data.forecast.forecastday[2].day.condition.text =="Patchy rain possible"){
-        day2icon.src ="Assests/patchy-rain.png";
+    //    }else if(data.forecast.forecastday[1].day.condition.text =="Partly cloudy"){
+    //     day1icon.src = "Assests/cloudy-day.png";
     
-       }else if(data.forecast.forecastday[2].day.condition.text =="Partly cloudy"){
-        day2icon.src = "Assests/cloudy-day.png";
+    //    }else if(data.forecast.forecastday[1].day.condition.text =="Sunny"){
+    //     day1icon.src = "Assests/sunny.png";
+    //    }
+    //    else if(data.forecast.forecastday[1].day.condition.text =="Clear"){
+    //     day1icon.src = "Assests/clear.png";
+    //    }
+    //    else if(data.forecast.forecastday[1].day.condition.text =="Mist"){
+    //     day1icon.src = "Assests/misty.png";
+
+    //    }else if(data.forecast.forecastday[1].day.condition.text =="Heavy rain"){
+    //     day1icon.src ="Assests/rainy.png";
+
+    //    }else if(data.forecast.forecastday[1].day.condition.text =="Light rain shower"){
+    //     day1icon.src ="Assests/light-rain.png";
+    //    }
+
+
+    //    if(data.forecast.forecastday[2].day.condition.text =="Patchy rain possible"){
+    //     day2icon.src ="Assests/patchy-rain.png";
     
-       }else if(data.forecast.forecastday[2].day.condition.text =="Sunny"){
-        day2icon.src = "Assests/sunny.png";
-       }
-       else if(data.forecast.forecastday[2].day.condition.text =="Clear"){
-        day2icon.src = "Assests/clear.png";
-       }
-       else if(data.forecast.forecastday[2].day.condition.text =="Mist"){
-        day2icon.src = "Assests/misty.png";
+    //    }else if(data.forecast.forecastday[2].day.condition.text =="Partly cloudy"){
+    //     day2icon.src = "Assests/cloudy-day.png";
+    
+    //    }else if(data.forecast.forecastday[2].day.condition.text =="Sunny"){
+    //     day2icon.src = "Assests/sunny.png";
+    //    }
+    //    else if(data.forecast.forecastday[2].day.condition.text =="Clear"){
+    //     day2icon.src = "Assests/clear.png";
+    //    }
+    //    else if(data.forecast.forecastday[2].day.condition.text =="Mist"){
+    //     day2icon.src = "Assests/misty.png";
 
-       }else if(data.forecast.forecastday[2].day.condition.text =="Heavy rain"){
-        day2icon.src ="Assests/rainy.png";
+    //    }else if(data.forecast.forecastday[2].day.condition.text =="Heavy rain"){
+    //     day2icon.src ="Assests/rainy.png";
 
-       }else if(data.forecast.forecastday[2].day.condition.text =="Light rain shower"){
-        day2icon.src ="Assests/light-rain.png";
-       }
+    //    }else if(data.forecast.forecastday[2].day.condition.text =="Light rain shower"){
+    //     day2icon.src ="Assests/light-rain.png";
+    //    }
 
 
 
@@ -147,7 +194,7 @@ async function weatherUpdate(city){
         document.querySelector(".hday"+[i+1]+"temp").innerHTML= Math.round(history.forecast.forecastday[i].day.avgtemp_c) +"°C";
         document.querySelector(".hday"+[i+1]+"hum").innerHTML= Math.round(history.forecast.forecastday[i].day.avghumidity) +"%";
         document.querySelector(".hday"+[i+1]+"wind").innerHTML= Math.round(history.forecast.forecastday[i].day.avgvis_km) +"km/h";
-        
+    
     }
 }
 
@@ -164,6 +211,11 @@ async function geoLocation(){
     var dataset=navigator.geolocation.getCurrentPosition(successCall,errorCall);
 }
 geoLocation();
+
+// ------------------------------weather Conditions------------------------------
+
+
+
 
 
 

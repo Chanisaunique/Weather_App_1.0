@@ -33,8 +33,9 @@ body{
     background: linear-gradient(270deg,#1D3557,#CAF0F8);
     border-radius: 10px;
     padding: 10px;
-    animation: upbxani 2s;
+    animation: scharea 2s;
 }
+
 
 .searchbox input{
         position: relative;
