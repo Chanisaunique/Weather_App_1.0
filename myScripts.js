@@ -70,11 +70,17 @@ async function weatherUpdate(city){
        }
        else if(data.current.condition.text =="Mist"){
         weathericon.src = "Assests/misty.png";
+
        }else if(data.current.condition.text =="Heavy rain"){
         weathericon.src = "Assests/rainy.png";
+
        }else if(data.current.condition.text =="Light rain shower"){
         weathericon.src = "Assests/light-rain.png";
+
+       }else if(data.current.condition.text =="Thundery outbreaks possible"){
+        weathericon.src = "Assests/thunder.png";
        }
+       
 
     // -----------------------Forecast Details-----------------------------------
     for (let i = 1; i < 3; i++) {
@@ -86,6 +92,8 @@ async function weatherUpdate(city){
     }
 
 
+// ------------------------------weather Conditions------------------------------
+
 // array of condition texts
 var conditionTexts = [
     "Patchy rain possible",
@@ -95,7 +103,9 @@ var conditionTexts = [
     "Mist",
     "Heavy rain",
     "Light rain shower",
-    "Thundery outbreaks possible"
+    "Thundery outbreaks possible",
+    "Moderate or heavy rain shower",
+    "Patchy light rain with thunder"
   ];
   
   //array of corresponding image file names
@@ -107,32 +117,46 @@ var conditionTexts = [
     "misty.png",
     "rainy.png",
     "light-rain.png",
-    "thunder.png"
+    "thunder.png",
+    "rainy.png",
+    "patchy-rain-thunder.png"
 
   ];
-  
-
-  
-  for (var i = 1; i <= 2; i++) {
+  // ------------------------------Forecast weather Icons Set------------------------------
+  for (var i = 0; i <= 2; i++) {
     // Get the condition text for the current day
     var condition = data.forecast.forecastday[i].day.condition.text;
-    console.log(condition);
-  
     // Find the index of the condition text in the array
     var index = conditionTexts.indexOf(condition);
     console.log(index);
-  
-    // Check if the condition text exists in the array
-    if (index !== -1) {
-      // Construct the image source by using the corresponding image file name
+    if (index != -1) {
       var imageSrc = "Assests/" + imageFileNames[index];
       console.log(imageSrc);
-    
-      // Get the element based on the class name
+ 
       var dayIcon = document.getElementsByName("day" + i + "icon");
       console.log(dayIcon);
   
-      // Set the image source to the dayIcon element
+      if (dayIcon.length > 0) {
+        dayIcon[0].src = imageSrc;
+      }
+    }
+  }
+
+// ------------------------------weather History Icons Set------------------------------
+
+  for (var i = 0; i <= 6; i++) {
+    // Get the condition text for the current day
+    var condition = history.forecast.forecastday[i].day.condition.text;
+    console.log(condition);
+    // Find the index of the condition text in the array
+    var index = conditionTexts.indexOf(condition);
+    if (index != -1) {
+      var imageSrc = "Assests/" + imageFileNames[index];
+      console.log(imageSrc);
+ 
+      var dayIcon = document.getElementsByName("hday" + (i+1) + "icon");
+      console.log(dayIcon);
+  
       if (dayIcon.length > 0) {
         dayIcon[0].src = imageSrc;
       }
@@ -140,54 +164,7 @@ var conditionTexts = [
   }
 
 
-    // if(data.forecast.forecastday[1].day.condition.text =="Patchy rain possible"){
-    //     day1icon.src ="Assests/patchy-rain.png";
-    
-    //    }else if(data.forecast.forecastday[1].day.condition.text =="Partly cloudy"){
-    //     day1icon.src = "Assests/cloudy-day.png";
-    
-    //    }else if(data.forecast.forecastday[1].day.condition.text =="Sunny"){
-    //     day1icon.src = "Assests/sunny.png";
-    //    }
-    //    else if(data.forecast.forecastday[1].day.condition.text =="Clear"){
-    //     day1icon.src = "Assests/clear.png";
-    //    }
-    //    else if(data.forecast.forecastday[1].day.condition.text =="Mist"){
-    //     day1icon.src = "Assests/misty.png";
-
-    //    }else if(data.forecast.forecastday[1].day.condition.text =="Heavy rain"){
-    //     day1icon.src ="Assests/rainy.png";
-
-    //    }else if(data.forecast.forecastday[1].day.condition.text =="Light rain shower"){
-    //     day1icon.src ="Assests/light-rain.png";
-    //    }
-
-
-    //    if(data.forecast.forecastday[2].day.condition.text =="Patchy rain possible"){
-    //     day2icon.src ="Assests/patchy-rain.png";
-    
-    //    }else if(data.forecast.forecastday[2].day.condition.text =="Partly cloudy"){
-    //     day2icon.src = "Assests/cloudy-day.png";
-    
-    //    }else if(data.forecast.forecastday[2].day.condition.text =="Sunny"){
-    //     day2icon.src = "Assests/sunny.png";
-    //    }
-    //    else if(data.forecast.forecastday[2].day.condition.text =="Clear"){
-    //     day2icon.src = "Assests/clear.png";
-    //    }
-    //    else if(data.forecast.forecastday[2].day.condition.text =="Mist"){
-    //     day2icon.src = "Assests/misty.png";
-
-    //    }else if(data.forecast.forecastday[2].day.condition.text =="Heavy rain"){
-    //     day2icon.src ="Assests/rainy.png";
-
-    //    }else if(data.forecast.forecastday[2].day.condition.text =="Light rain shower"){
-    //     day2icon.src ="Assests/light-rain.png";
-    //    }
-
-
-
-    // -----------------------Forecast Details-----------------------------------
+    // -----------------------History Details-----------------------------------
     for (let i = 0; i < 7; i++) {
         document.querySelector(".hday"+[i+1]).innerHTML= history.forecast.forecastday[i].date;
         document.querySelector(".hday"+[i+1]+"cond").innerHTML= history.forecast.forecastday[i].day.condition.text;
@@ -212,7 +189,7 @@ async function geoLocation(){
 }
 geoLocation();
 
-// ------------------------------weather Conditions------------------------------
+
 
 
 
