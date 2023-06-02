@@ -204,7 +204,7 @@ body{
     font-size: 45px;
     font-weight: 900;
 }
-#humidityrow, #windrow{
+#humidityrow, #windrow, #condrow{
     font-size: 40px;
     font-weight: 500;
 }
