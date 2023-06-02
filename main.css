@@ -111,6 +111,10 @@ body{
     padding-top: 15px;
     
 }
+.navpane{
+    font-size: 25px;
+    font-weight: 500;
+}
 
 .container .nav-link{
     color:white !important;
