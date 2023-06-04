@@ -108,7 +108,7 @@ var conditionTexts = [
     "Patchy light rain with thunder"
   ];
   
-  //array of corresponding image file names
+  //array of corresponding image file namess
   var imageFileNames = [
     "patchy-rain.png",
     "cloudy-day.png",
