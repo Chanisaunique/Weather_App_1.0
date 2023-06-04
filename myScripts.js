@@ -4,7 +4,7 @@ const apiKey="49a66178439b4560bd661234231605";
 
 async function weatherUpdate(city){
     
-    const response=await fetch('http://api.weatherapi.com/v1/forecast.json?key='+ apiKey +'&q=' + city +'&days=5');
+    const response=await fetch('https://api.weatherapi.com/v1/forecast.json?key='+ apiKey +'&q=' + city +'&days=5');
     var data = await response.json();
 
     console.log(data);
@@ -44,7 +44,7 @@ async function weatherUpdate(city){
       console.log("The past 7 date is " + past7day); 
 
 
-    const historyres=await fetch('http://api.weatherapi.com/v1/history.json?key='+ apiKey +'&q=' + city +'&dt='+past7day +'&end_dt='+currentDate);
+    const historyres=await fetch('https://api.weatherapi.com/v1/history.json?key='+ apiKey +'&q=' + city +'&dt='+past7day +'&end_dt='+currentDate);
     var history = await historyres.json();
 
     console.log(history);
