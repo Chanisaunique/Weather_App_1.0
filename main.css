@@ -3,6 +3,7 @@
 *{
     font-family: 'Jura', sans-serif;
     box-sizing: border-box;
+    
 }
 
 body{
@@ -11,10 +12,15 @@ body{
     border: 0;
     left: 0;
     top: 0;
-    
     /* background: url(Assests/sky.jpg) no-repeat fixed; */
     background: linear-gradient(170deg,#457B9D,#F1FAEE);
     background-size: 100% 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar{
+    display: none;
 }
 
 /* ------------------------------------Search Area------------------------------------ */
@@ -28,75 +34,73 @@ body{
     top: 0;
     align-items: center;
     justify-content: center;
-    width: 99vw;
+    width: 100%;
     height: 115px;
     background: linear-gradient(270deg,#1D3557,#CAF0F8);
     border-radius: 10px;
-    padding: 10px;
-    animation: scharea 2s;
+    
 }
 
 
-.searchbox input{
-        position: relative;
+.searcharea input{
+        position: absolute;
         border: 0;
         outline: 0;
         background: linear-gradient(90deg,#0077B6,#00B4D8);
-        color: #000;
-        padding: 10px;
-        min-height: 75px;
-        max-width: 1160px;
+        height: 65%;
+        width: 62%;
         border-radius: 15px;
-        margin: 10px;
+        margin-top: 0;
         font-size: 25px;
+        font-weight: 600;
         left: 17vw;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
 }
 
-.searchbox .btn{
+#sebtn{
     position: absolute;
     left: 80%;
     border-radius: 100px;
-    color: #e0e1dd;
-    height: 70px;
-    font-weight: 500;
+    color: black;
+    height: 60%;
+    width: 6%;
+    font-weight: 600;
     font-size: 21px;
-    top: 20%;
-}
-#geobtn{
-    left: 86%;
-    border-radius: 10%;
-    height: 70px;
-    width: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    
     
 }
-#btnimg{
-    position: relative;
-    right: 13px;
-    bottom: 5px;
-    border: 0;
-    height: 65px;
-    width: 65px;
+#geobtn{
+    position: absolute;
+    left: 87%;
+    border-radius: 10%;
+    height: 60%;
+    width: 4%;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%);
+    
 }
 
-#lbtnimg{
+
+#btnimg{
     border: 0;
     padding: 0;
     position: relative;
-    height: 60px;
-    width: 60px;
+    height: 120%;
+    width: 160%;
     bottom: 5px;
     right: 14px;
 }
 
-#lightbtn {
-    position: absolute;
-    left: 95%;
-    background-color: #e0e1dd;
-    bottom: 5px;
-    border: 0;
-    height: 60px;
-    width: 60px;
-}
+
 
 /* ------------------------------------Navigation Bar------------------------------------ */
 .navigationbar{
@@ -254,3 +258,77 @@ body{
     font-size: 28px;
     font-weight: 600;
 }
+
+
+/* media-queries 580 pixels*/
+
+@media screen and (max-width: 580px) {
+
+    /* ------------------------Search area------------------------ */
+    
+    .searcharea {
+      justify-content: center;
+      align-items: center;
+      
+      
+    }
+
+    input {
+        max-width: 250px;
+        height: 65px;
+        margin: 0;
+    }
+    #searchtext{
+        font-size: 14px;
+    }
+    
+
+    #sebtn {
+        height: 30%;
+        width: 19%;
+        font-size: 13px;
+        top: 34%;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    #geobtn {
+        height: 28%;
+        width: 10%;
+        font-size: 10px;
+        top: 65%;
+        left: 84%;
+    }
+    #btnimg{
+        min-height: 190%;
+        min-width: 650%;
+        
+    }
+
+    /* ------------------------Navigation Bar------------------------ */
+    .navigationbar{
+        z-index: 10;
+        position: sticky;
+        top: 115px;
+        left: 5%;
+        background: linear-gradient(90deg,#A8DADC,#1D3557);
+        border-radius: 15px;
+        padding: 5px 5px;
+        width: 90%;
+        height:110px;
+        font-size: 20px;
+        padding-top: 15px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+        
+    }
+
+    .navpane{
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+
+   
+  }

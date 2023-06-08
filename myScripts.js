@@ -126,6 +126,7 @@ var conditionTexts = [
   for (var i = 0; i <= 2; i++) {
     // Get the condition text for the current day
     var condition = data.forecast.forecastday[i].day.condition.text;
+    
     // Find the index of the condition text in the array
     var index = conditionTexts.indexOf(condition);
     console.log(index);
@@ -176,7 +177,7 @@ var conditionTexts = [
 }
 
       // -----------------------GeoLocation GET-----------------------------------
-async function geoLocation(){
+ async function geoLocation(){
     const successCall=(location)=>{
         console.log(location);
         console.log(location);
