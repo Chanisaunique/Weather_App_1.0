@@ -299,6 +299,7 @@ body::-webkit-scrollbar{
         top: 65%;
         left: 84%;
     }
+
     #btnimg{
         min-height: 190%;
         min-width: 650%;
@@ -321,7 +322,6 @@ body::-webkit-scrollbar{
         justify-content: center;
         align-items: center;
         margin-bottom: 10px;
-        
     }
 
     .navpane{
@@ -329,6 +329,38 @@ body::-webkit-scrollbar{
         font-weight: 500;
     }
 
-
+    /* ------------------------Current Weather Details------------------------ */
    
+    #weathericon{
+        height: 175px;
+        width: 175px;
+        padding-bottom: 15px;
+    }
+    
+    .weather div .condition{
+        font-size: 28px !important;
+        font-weight: 600;
+    }
+    .weather div .temp{
+        font-size: 25px !important;
+        font-weight: 1000;
+    }
+    .weather div .feelstext, .feels{
+        font-size: 20px !important;
+        font-weight: 600;
+    }
+    .weather div .city{
+        font-size: 30px !important;
+        font-weight: 900;
+    }
+
+    .winddetails{
+        font-size: 15px !important;
+        font-weight: 900;
+    }
+    .winddetails #wind,#humidity{
+        height: 70%;
+        height: 70%;
+    }
+
   }
