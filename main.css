@@ -3,7 +3,6 @@
 *{
     font-family: 'Jura', sans-serif;
     box-sizing: border-box;
-    
 }
 
 body{
@@ -41,19 +40,18 @@ body::-webkit-scrollbar{
     
 }
 
-
 .searcharea input{
         position: absolute;
         border: 0;
         outline: 0;
         background: linear-gradient(90deg,#0077B6,#00B4D8);
         height: 65%;
-        width: 62%;
+        width: 74%;
         border-radius: 15px;
         margin-top: 0;
         font-size: 25px;
         font-weight: 600;
-        left: 17vw;
+        left: 5%;
         right: 0;
         top: 50%;
         transform: translateY(-50%);
@@ -70,20 +68,17 @@ body::-webkit-scrollbar{
     font-size: 21px;
     top: 50%;
     transform: translateY(-50%);
-    align-items: center;
     padding: 0;
     margin: 0;
     
-    
 }
+
 #geobtn{
     position: absolute;
     left: 87%;
     border-radius: 10%;
     height: 60%;
     width: 4%;
-    justify-content: center;
-    align-items: center;
     top: 50%;
     transform: translateY(-50%);
     
@@ -99,7 +94,6 @@ body::-webkit-scrollbar{
     bottom: 5px;
     right: 14px;
 }
-
 
 
 /* ------------------------------------Navigation Bar------------------------------------ */
@@ -142,11 +136,10 @@ body::-webkit-scrollbar{
     justify-content: center;
     padding-top: 0px;
     margin: 0;
-    /* height: 100vh; */
     width: 100vw;
    
     text-align: center;
-    /* background: linear-gradient(90deg,#81b29a,#3d405b); */
+    
 }
 
 .weather div .condition{
@@ -186,43 +179,44 @@ body::-webkit-scrollbar{
 
 .forecastweather{
     position: relative;
-    height: 80vh;
-    width: 100vw;
     align-items: center;
     text-align: center;
     justify-content: center;
-    padding: 0; 
+    padding: 0;
     border: 0;
     margin: 0;
-    height: 800px;
-    width: 100vw;
-    /* background: linear-gradient(180deg,#F1FAEE,#457B9D); */
+    
 }
 #titlef{
     position: absolute;
     align-items: center;
     text-align: center;
     justify-content: center;
-    left: 38vw;
+    right: 0;
+    left: 0;
     font-size: 60px;
     font-weight: 800;
+    text-decoration: underline;
+
 }
 #forecastbox{
     position: relative;
     align-items: center;
     text-align: center;
     justify-content: center;
+    margin-top: 25px;
 }
-
 
 #daysrow {
     font-size: 40px;
     font-weight: 600;
 }
+
 #temprow{
     font-size: 45px;
     font-weight: 900;
 }
+
 #humidityrow, #windrow, #condrow{
     font-size: 40px;
     font-weight: 500;
@@ -244,9 +238,11 @@ body::-webkit-scrollbar{
     align-items: center;
     text-align: center;
     justify-content: center;
-    left: 31vw;
+    left: 0;
+    right: 0;
     font-size: 60px;
     font-weight: 800;
+    text-decoration: underline;
 }
 
 #hdaysrow {
@@ -260,7 +256,7 @@ body::-webkit-scrollbar{
 }
 
 
-/* media-queries 580 pixels*/
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-Media-queries 580 pixels-*-*-*-*-*-*-*-*-*--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 
 @media screen and (max-width: 580px) {
 
@@ -274,20 +270,21 @@ body::-webkit-scrollbar{
     }
 
     input {
-        max-width: 250px;
+        max-width: 290px;
         height: 65px;
         margin: 0;
+        
+        
+        
     }
-    #searchtext{
-        font-size: 14px;
-    }
-    
 
     #sebtn {
+        position: relative;
         height: 30%;
         width: 19%;
         font-size: 13px;
         top: 34%;
+        left: 80%;
         align-items: center;
         justify-content: center;
         
@@ -302,7 +299,7 @@ body::-webkit-scrollbar{
 
     #btnimg{
         min-height: 190%;
-        min-width: 650%;
+        width: 650%;
         
     }
 
@@ -314,14 +311,16 @@ body::-webkit-scrollbar{
         left: 5%;
         background: linear-gradient(90deg,#A8DADC,#1D3557);
         border-radius: 15px;
-        padding: 5px 5px;
+        padding: 0px;
         width: 90%;
-        height:110px;
+        height:100px;
         font-size: 20px;
-        padding-top: 15px;
         justify-content: center;
         align-items: center;
         margin-bottom: 10px;
+        
+        
+        
     }
 
     .navpane{
@@ -341,14 +340,17 @@ body::-webkit-scrollbar{
         font-size: 28px !important;
         font-weight: 600;
     }
+
     .weather div .temp{
         font-size: 25px !important;
         font-weight: 1000;
     }
+
     .weather div .feelstext, .feels{
         font-size: 20px !important;
         font-weight: 600;
     }
+
     .weather div .city{
         font-size: 30px !important;
         font-weight: 900;
@@ -358,9 +360,73 @@ body::-webkit-scrollbar{
         font-size: 15px !important;
         font-weight: 900;
     }
+
     .winddetails #wind,#humidity{
         height: 70%;
         height: 70%;
+    }
+
+     /* ------------------------Weather Forecast Details------------------------ */
+
+     #titlef{
+        position: absolute;
+        font-size: 30px;
+        font-weight: 800;
+        top: 26%;
+        right: 0;
+        left: 0;
+        margin-top: 15px;
+        font-size: 30px;
+    }
+
+    
+    #daysrow {
+        font-size: 24px;
+        font-weight: 600;
+    }
+    
+    #temprow{
+        font-size: 30px;
+        font-weight: 900;
+    }
+    
+    #humidityrow, #windrow, #condrow{
+        font-size: 26px;
+        font-weight: 600;
+    }
+    
+    #day1icon, #day2icon, #day3icon,#day4icon{
+        max-height: 60px;
+        max-width: 60px;
+    }
+
+    /* ------------------------Weather History Details------------------------ */
+
+    #hday1icon, #hday2icon, #hday3icon,#hday4icon,#hday5icon,#hday6icon,#hday7icon{
+        max-height: 30px;
+        max-width: 30px;
+    }
+    
+    #titleh{
+        position: absolute;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        left: 0;
+        right: 0;
+        font-size: 60px;
+        font-weight: 800;
+        text-decoration: underline;
+    }
+    
+    #hdaysrow {
+        font-size: 28px;
+        font-weight: 600;
+    }
+    
+    #hcondrow{
+        font-size: 28px;
+        font-weight: 600;
     }
 
   }
