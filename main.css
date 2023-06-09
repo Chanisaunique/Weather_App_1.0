@@ -12,7 +12,7 @@ body{
     left: 0;
     top: 0;
     /* background: url(Assests/sky.jpg) no-repeat fixed; */
-    background: linear-gradient(170deg,#457B9D,#F1FAEE);
+    background: linear-gradient(170deg,#c9ada7,#9f86c0);
     background-size: 100% 100%;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -31,12 +31,9 @@ body::-webkit-scrollbar{
     z-index: 9;
     position: sticky;
     top: 0;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     height: 115px;
-    background: linear-gradient(270deg,#1D3557,#CAF0F8);
-    border-radius: 10px;
+    background: linear-gradient(270deg,#9f86c0,#22223b);
     animation: searchbox 2s;
 }
 /* Animations */
@@ -51,19 +48,16 @@ body::-webkit-scrollbar{
 
 .searcharea input{
         position: absolute;
-        border: 0;
-        outline: 0;
-        background: linear-gradient(90deg,#0077B6,#00B4D8);
+        background: linear-gradient(90deg,#5e548e,#e0b1cb);
         height: 65%;
         width: 74%;
         border-radius: 15px;
-        margin-top: 0;
         font-size: 25px;
         font-weight: 600;
         left: 5%;
-        right: 0;
         top: 50%;
         transform: translateY(-50%);
+        border-color: violet;
 }
 
 #sebtn{
@@ -111,7 +105,7 @@ body::-webkit-scrollbar{
     position: sticky;
     top: 115px;
     left: 5%;
-    background: linear-gradient(90deg,#A8DADC,#1D3557);
+    background: linear-gradient(90deg,#5e548e,#231942);
     border-radius: 15px;    
     padding: 10px 10px;
     width: 90%;
@@ -335,7 +329,6 @@ body::-webkit-scrollbar{
         position: sticky;
         top: 115px;
         left: 5%;
-        background: linear-gradient(90deg,#A8DADC,#1D3557);
         border-radius: 15px;
         padding: 0px;
         width: 90%;
@@ -469,6 +462,7 @@ body::-webkit-scrollbar{
     
   }
 
+  /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-Media-queries 425 pixels-*-*-*-*-*-*-*-*-*--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
   @media screen and (max-width: 425px) {
     
     #btnimg{
@@ -484,7 +478,7 @@ body::-webkit-scrollbar{
     }
 
   }
-
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-Media-queries 400 pixels-*-*-*-*-*-*-*-*-*--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
   @media screen and (max-width: 400px) {
     
     #btnimg{
@@ -499,6 +493,9 @@ body::-webkit-scrollbar{
         text-align: center;
         align-items: center;
         align-self: auto;
+    }
+    input {
+        font-size: 17px !important;
     }
 
   }
