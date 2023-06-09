@@ -21,13 +21,45 @@ body::-webkit-scrollbar{
     display: none;
 }
 
+
+/* ------------------------------------Auto Complete Box------------------------------------ */
+.autocombox{
+    position: relative;
+    max-width: 650px;
+    max-height: 350px;
+    overflow-y: auto;
+    border-radius: 15px;
+    top: 93px;
+    left: 5.5%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.autocombox li{
+    list-style: none;
+    font-size: 25px;
+    background-color: white;
+    font-weight: 600;
+    padding: 8px 12px;
+    width: 100%;
+    cursor: default;
+    display: none;
+
+}
+
+.autocombox li:hover{
+    background:#495057;
+}
 /* ------------------------------------Search Area------------------------------------ */
 .fa-sharp{
     font-size: 3vw;
 }
 
 .searcharea{
-    z-index: 9;
+    z-index: 2;
     position: sticky;
     top: 0;
     width: 100%;
@@ -47,7 +79,7 @@ body::-webkit-scrollbar{
 
 .searcharea input{
         position: absolute;
-        background: linear-gradient(90deg,#DEE2E6,#212529);
+        /* background: linear-gradient(90deg,#DEE2E6,#212529); */
         height: 65%;
         width: 74%;
         border-radius: 15px;
@@ -100,7 +132,7 @@ body::-webkit-scrollbar{
 
 /* ------------------------------------Navigation Bar------------------------------------ */
 .navigationbar{
-    z-index: 10;
+    z-index: 1;
     position: sticky;
     top: 115px;
     left: 5%;

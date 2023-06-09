@@ -1,11 +1,48 @@
 const apiKey="49a66178439b4560bd661234231605";
-// const schtxt=document.querySelector("searchtext");
-// const weatherIcon=document.querySelector(".weather-icon");
+
+const searchWrapper=document.querySelector(".searcharea");
+const inputBox=searchWrapper.querySelector("input");
+const suggBox=searchWrapper.querySelector(".autocombox");
+
+
+
+
+async function searchLocation(city){
+    const Searchresponse=await fetch('https://api.weatherapi.com/v1/search.json?key='+ apiKey +'&q=' + city +'&days=5');
+    var searchData=await Searchresponse.json();
+
+    let suggestions=[];
+    let empArray=[];
+
+    for (let i = 0; i <= 4; i++) {
+      console.log(searchData[i].name);
+
+      suggestions[i]=searchData[i].name;
+  
+      empArray[i]='<li>'+ suggestions[i] +'</li>';
+    
+      console.log(empArray);
+    }
+    showSuggestion(empArray);
+    
+}
+
+function showSuggestion(list){
+  let listData;
+  if(!list.length){
+  }else{
+    listData=list.join('');
+  }
+  suggBox.innerHTML=listData;
+
+}
 
 async function weatherUpdate(city){
     
     const response=await fetch('https://api.weatherapi.com/v1/forecast.json?key='+ apiKey +'&q=' + city +'&days=5');
-    var data = await response.json();
+    var data = await await response.json();
+
+    
 
     console.log(data);
 
@@ -108,7 +145,7 @@ var conditionTexts = [
     "Patchy light rain with thunder"
   ];
   
-  //array of corresponding image file namess
+  //array of corresponding image file names
   var imageFileNames = [
     "patchy-rain.png",
     "cloudy-day.png",
@@ -172,7 +209,6 @@ var conditionTexts = [
         document.querySelector(".hday"+[i+1]+"temp").innerHTML= Math.round(history.forecast.forecastday[i].day.avgtemp_c) +"°C";
         document.querySelector(".hday"+[i+1]+"hum").innerHTML= Math.round(history.forecast.forecastday[i].day.avghumidity) +"%";
         document.querySelector(".hday"+[i+1]+"wind").innerHTML= Math.round(history.forecast.forecastday[i].day.avgvis_km) +"km/h";
-    
     }
 }
 

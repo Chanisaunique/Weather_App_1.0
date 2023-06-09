@@ -18,8 +18,15 @@
 <body>
     
     <div class="searcharea">
-                <input id="searchtext" class="form-control form-control-lg" type="text" placeholder="Enter a city or country name" aria-label=".form-control-lg example">
-                <button id="sebtn" type="button" class="btn btn-outline-light btn-lg" onclick="weatherUpdate(searchtext.value)">Search</button>
+                <input id="searchtext" class="form-control form-control-lg" type="text" onkeyup="searchLocation(searchtext.value)" placeholder="Enter a city or country name" aria-label=".form-control-lg example">
+                <div class="autocombox">
+                  <li>Galle</li>
+                  <li>Colombo</li>
+                  <li>New York</li>
+                  <li>Delhi</li>
+                  <li>kandy</li>
+                </div>
+                <button id="sebtn" type="button" class="btn btn-outline-light btn-lg" onkeypress="weatherUpdate(searchtext.value)">Search</button>
                 <button id="geobtn" type="button" class="btn btn btn-outline-light btn-lg" onclick="geoLocation()"> <img id="btnimg" src="Assests/location.png"> </button>
     </div>
 
@@ -47,7 +54,7 @@
                 </div>
             </div>
         </div>
-    </div>    
+    </div>
 
 <!----------------------------------Current Weather Body---------------------------------->
 <section id="home"></section>
