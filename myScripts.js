@@ -6,7 +6,6 @@ const suggBox=searchWrapper.querySelector(".autocombox");
 
 
 
-
 async function searchLocation(city){
     const Searchresponse=await fetch('https://api.weatherapi.com/v1/search.json?key='+ apiKey +'&q=' + city +'&days=5');
     var searchData=await Searchresponse.json();
@@ -22,6 +21,7 @@ async function searchLocation(city){
       empArray[i]='<li>'+ suggestions[i] +'</li>';
     
       console.log(empArray);
+      //searchWrapper.classList.add("active");
     }
     showSuggestion(empArray);
     

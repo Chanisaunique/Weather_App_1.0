@@ -53,6 +53,18 @@ body::-webkit-scrollbar{
 .autocombox li:hover{
     background:#495057;
 }
+
+.searcharea.active .autocombox{
+    opacity: 1;
+    pointer-events:auto;
+
+}
+
+.searcharea.active .autocombox li{
+    display: block;
+}
+
+
 /* ------------------------------------Search Area------------------------------------ */
 .fa-sharp{
     font-size: 3vw;
@@ -90,6 +102,7 @@ body::-webkit-scrollbar{
         transform: translateY(-50%);
         border-color: aliceblue;
 }
+
 
 #sebtn{
     position: absolute;
@@ -180,27 +193,29 @@ body::-webkit-scrollbar{
     padding-top: 0px;
     margin: 0;
     width: 100vw;
-   
     text-align: center;
-    
 }
 
 .weather div .condition{
     font-size: 2vw !important;
     font-weight: 400;
 }
+
 .weather div .temp{
     font-size: 6vw !important;
     font-weight: 1000;
 }
+
 .weather div .feelstext, .feels{
     font-size: 2.2vw !important;
     font-weight: 500;
 }
+
 .weather div .city{
     font-size: 4vw !important;
     font-weight: 900;
 }
+
 .feelstext .feelstext{
     text-align: right;
     margin: 0;
@@ -218,7 +233,9 @@ body::-webkit-scrollbar{
     font-weight: 1000;
 }
 
+
 /*---------------------------------Forecast Weather details---------------------------------*/
+
 
 .forecastweather{
     position: relative;
@@ -228,8 +245,8 @@ body::-webkit-scrollbar{
     padding: 0;
     border: 0;
     margin: 0;
-    
 }
+
 #titlef{
     position: absolute;
     align-items: center;
@@ -237,11 +254,12 @@ body::-webkit-scrollbar{
     justify-content: center;
     right: 0;
     left: 0;
-    font-size: 60px;
+    font-size: 55px;
     font-weight: 800;
     text-decoration: underline;
 
 }
+
 #forecastbox{
     position: relative;
     align-items: center;
@@ -251,7 +269,7 @@ body::-webkit-scrollbar{
     margin-bottom: 50px;
 }
 
-#daysrow {
+#daysrow{
     font-size: 40px;
     font-weight: 600;
 }
@@ -337,6 +355,7 @@ body::-webkit-scrollbar{
         left: 80%;
         align-items: center;
         justify-content: center;
+        top: 5vh;
         
     }
     #geobtn {
