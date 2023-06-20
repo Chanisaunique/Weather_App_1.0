@@ -1,9 +1,8 @@
 const apiKey="49a66178439b4560bd661234231605";
 
-const searchWrapper=document.querySelector(".searcharea");
+const searchWrapper=document.querySelector(".search-input");
 const inputBox=searchWrapper.querySelector("input");
-const suggBox=searchWrapper.querySelector(".autocombox");
-
+const suggBox=searchWrapper.querySelector(".autocom-box");
 
 
 async function searchLocation(city){
@@ -21,10 +20,9 @@ async function searchLocation(city){
       empArray[i]='<li>'+ suggestions[i] +'</li>';
     
       console.log(empArray);
-      //searchWrapper.classList.add("active");
+
     }
     showSuggestion(empArray);
-    
 }
 
 function showSuggestion(list){
@@ -32,8 +30,9 @@ function showSuggestion(list){
   if(!list.length){
   }else{
     listData=list.join('');
+
   }
-  suggBox.innerHTML=listData;
+
 
 }
 
@@ -43,8 +42,7 @@ async function weatherUpdate(city){
     var data = await await response.json();
 
     
-
-    console.log(data);
+    // console.log(data);
 
     // Current Date GET
     const date = new Date();
@@ -59,12 +57,12 @@ async function weatherUpdate(city){
 
     let currentDate = `${currentYear}-${currentMonth}-${currentDay}`;
 
-    console.log("The current date is " + currentDate); 
+    // console.log("The current date is " + currentDate); 
 
     // 7 Days ago Date GET
     const yesterday = new Date();
     yesterday.setDate(yesterday.getDate() - 7);
-    console.log(yesterday);
+    // console.log(yesterday);
     function padTo2Digits(num) {
         return num.toString().padStart(2, '0');
       }
@@ -78,13 +76,13 @@ async function weatherUpdate(city){
       }
       
       past7day=formatDate(yesterday);
-      console.log("The past 7 date is " + past7day); 
+      // console.log("The past 7 date is " + past7day); 
 
 
     const historyres=await fetch('https://api.weatherapi.com/v1/history.json?key='+ apiKey +'&q=' + city +'&dt='+past7day +'&end_dt='+currentDate);
     var history = await historyres.json();
 
-    console.log(history);
+    // console.log(history);
 
     document.querySelector(".city").innerHTML= data.location.name;
     document.querySelector(".temp").innerHTML= Math.round(data.current.temp_c) +"°C";
@@ -166,13 +164,13 @@ var conditionTexts = [
     
     // Find the index of the condition text in the array
     var index = conditionTexts.indexOf(condition);
-    console.log(index);
+    // console.log(index);
     if (index != -1) {
       var imageSrc = "Assests/" + imageFileNames[index];
-      console.log(imageSrc);
+      // console.log(imageSrc);
  
       var dayIcon = document.getElementsByName("day" + i + "icon");
-      console.log(dayIcon);
+      // console.log(dayIcon);
   
       if (dayIcon.length > 0) {
         dayIcon[0].src = imageSrc;
@@ -185,15 +183,15 @@ var conditionTexts = [
   for (var i = 0; i <= 6; i++) {
     // Get the condition text for the current day
     var condition = history.forecast.forecastday[i].day.condition.text;
-    console.log(condition);
+    // console.log(condition);
     // Find the index of the condition text in the array
     var index = conditionTexts.indexOf(condition);
     if (index != -1) {
       var imageSrc = "Assests/" + imageFileNames[index];
-      console.log(imageSrc);
+      // console.log(imageSrc);
  
       var dayIcon = document.getElementsByName("hday" + (i+1) + "icon");
-      console.log(dayIcon);
+      // console.log(dayIcon);
   
       if (dayIcon.length > 0) {
         dayIcon[0].src = imageSrc;
@@ -202,7 +200,7 @@ var conditionTexts = [
   }
 
 
-    // -----------------------History Details-----------------------------------
+    // -----------------------History Details------------------------------------
     for (let i = 0; i < 7; i++) {
         document.querySelector(".hday"+[i+1]).innerHTML= history.forecast.forecastday[i].date;
         document.querySelector(".hday"+[i+1]+"cond").innerHTML= history.forecast.forecastday[i].day.condition.text;
@@ -215,23 +213,13 @@ var conditionTexts = [
       // -----------------------GeoLocation GET-----------------------------------
  async function geoLocation(){
     const successCall=(location)=>{
-        console.log(location);
-        console.log(location);
+        // console.log(location);
+        // console.log(location);
         weatherUpdate(location.coords.latitude+","+location.coords.longitude);
     }
     const errorCall=(error)=>{
-        console.error(error);
+        // console.error(error);
     }
     var dataset=navigator.geolocation.getCurrentPosition(successCall,errorCall);
 }
 geoLocation();
-
-
-
-
-
-
-
-
-
-

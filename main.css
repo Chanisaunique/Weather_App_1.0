@@ -23,7 +23,7 @@ body::-webkit-scrollbar{
 
 
 /* ------------------------------------Auto Complete Box------------------------------------ */
-.autocombox{
+.autocom-box{
     position: relative;
     max-width: 650px;
     max-height: 350px;
@@ -35,10 +35,10 @@ body::-webkit-scrollbar{
     justify-content: center;
     text-align: center;
     opacity: 0;
-    pointer-events: none;
+    pointer-events: auto;
 }
 
-.autocombox li{
+.autocom-box li{
     list-style: none;
     font-size: 25px;
     background-color: white;
@@ -46,23 +46,29 @@ body::-webkit-scrollbar{
     padding: 8px 12px;
     width: 100%;
     cursor: default;
-    display: none;
+    display: auto;
 
 }
 
-.autocombox li:hover{
+.autocom-box li:hover{
     background:#495057;
 }
 
-.searcharea.active .autocombox{
-    opacity: 1;
+.search-input .autocom-box{
+    opacity: 0;
     pointer-events:auto;
 
 }
 
-.searcharea.active .autocombox li{
-    display: block;
+.search-input.active .autocom-box{
+    opacity: 1;
+    pointer-events:auto;
 }
+
+
+/* .search-input .autocom-box li{
+    display: block;
+} */
 
 
 /* ------------------------------------Search Area------------------------------------ */

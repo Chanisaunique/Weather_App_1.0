@@ -1,205 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App 1.0</title>
-    <link rel="shortcut icon" href="Assests/icon.png" type="image/x-icon">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="main.css">
-    <script src="myScripts.js"></script>
-    
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App 1.0</title>
+  <link rel="shortcut icon" href="Assests/icon.png" type="image/x-icon">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+  <script src="myScripts.js"></script>
 </head>
 
 <!-----------------------------------Search bar------------------------------------->
 
 <body>
-    
-    <div class="searcharea">
-                <input id="searchtext" class="form-control form-control-lg" type="text" onkeyup="searchLocation(searchtext.value)" placeholder="Enter a city or country name" aria-label=".form-control-lg example">
-                <div class="autocombox">
-                  <li>Galle</li>
-                  <li>Colombo</li>
-                  <li>New York</li>
-                  <li>Delhi</li>
-                  <li>kandy</li>
-                </div>
-                <button id="sebtn" type="button" class="btn btn-outline-light btn-lg" onkeypress="weatherUpdate(searchtext.value)">Search</button>
-                <button id="geobtn" type="button" class="btn btn btn-outline-light btn-lg" onclick="geoLocation()"> <img id="btnimg" src="Assests/location.png"> </button>
-    </div>
 
-<!----------------------------------Navigation Pane---------------------------------->
-    <div class="navigationbar">
-        <div class="container text-center">
-            <div class="row">
-                <div class="col">
-                    <div class="navpane">
-                        <ul class="nav nav-pills nav-fill">
-                            <li class="nav-item">
-                            <a class="nav-link"href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="nav-link" href="#forecastsection">Weather Forecast</a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="nav-link" href="#historysection">Weather History</a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="nav-link" href="https://github.com/Chanisaunique/Weather_App_1.0" target="_blank">About</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-<!----------------------------------Current Weather Body---------------------------------->
-<section id="home"></section>
-
-    <div class="weather" id="home">
-        <div class="details">
-            <img id="weathericon" src="Assests/rainy.png" >
-            <p class="condition">Raining</p>
-            <p class="temp">35°C</p>
-
-            <div class="container text-center feelstext">
-                <div class="row">
-                  <div class="col">
-                    <p class="feelstext">Feels like :</p>
-                  </div>
-                  <div class="col">
-                    <p class="feels">37°C</p>
-                  </div>
-                </div>
-              </div>
-
-            <p class="city">Panadura</p>
-
-            <div class="winddetails">
-                <div class="container text-center wdetails">
-                    <div class="row">
-                      <div class="col">
-                        <img id="humidity" src="Assests/humidity.png">
-                        <p class="humidtytext">15%</p>
-                      </div>
-                      <div class="col">
-                        <img id="wind" src="Assests/wind.png">
-                        <p class="windtext">18Km/h</p>
-                      </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col">
-                          <p class="humidty">Humidty</p>
-                        </div>
-                        <div class="col">
-                          <p class="wind speed">Wind Speed</p>
-                        </div>
-                      </div>
-                  </div>
-            </div>
-        </div>
-    </div>
-    
-<!--------------------------------Forecast Weather Body-------------------------------->
-<section id="forecastsection"></section>
-
-<div class="forecastweather">
-  <br><br><br><br><br><br><br><br>
-    <p id="titlef">Weather Forecast</p>
-    
-    <div class="container text-center" id="forecastbox">
-      <br><br>
-        <div class="row" id="daysrow">
-          <div class="col">
-            <p class="day1">Day 1</p> 
-          </div>
-          <div class="col">
-            <p class="day2">Day </p> 
-          </div>
-        </div>
-
-        <!-------------------------------------------------->
-        <br>
-        <div class="row" id="iconrow">
-            <div class="col" id="icon1">
-                <img src="Assests/cloudy-512.png" id="day1icon" name="day1icon">
-            </div>
-            <div class="col" id="icon2">
-                <img src="Assests/cloudy-512.png" id="day2icon" name="day2icon">
-            </div>
-            
-          </div>
-
-          <div class="row" id="condrow">
-            <div class="col">
-                <p class="day1cond">Raining</p>
-            </div>
-            <div class="col">
-                <p class="day2cond">Sunny</p>
-            </div>
-            
-          </div>
-        <!-------------------------------------------------->
-        <br>
-        <div class="row" id="temprow">
-            <div class="col">
-                <p class="day1temp">35°C</p>
-            </div>
-            <div class="col">
-                <p class="day2temp">35°C</p>
-            </div>
-            
-          </div>
-          <!-------------------------------------------------->
-        
-        <div class="row" id="humidityrow">
-            <div class="col">
-                <p class="day1hum">57%</p>
-            </div>
-            <div class="col">
-                <p class="day2hum">57%</p>
-            </div>
-            
-          </div>
-          <!-------------------------------------------------->
-        
-        <div class="row" id="windrow">
-            <div class="col">
-                <p class="day1wind">17km/h</p>
-            </div>
-            <div class="col">
-                <p class="day2wind">17km/h</p>
-            </div>
-            
-          </div>
+  <div class="searcharea">
+    <div class="search-input">
+      <input id="searchtext" class="form-control form-control-lg" type="text" onkeyup="searchLocation(searchtext.value)"
+        placeholder="Enter a city or country name" aria-label=".form-control-lg example">
+      <div class="autocom-box" id="autocombobox">
+        <li>Galle</li>
+        <li>Colombo</li>
+        <li>New York</li>
+        <li>Delhi</li>
+        <li>kandy</li>
       </div>
-</div>
+    </div>
 
+    <button id="sebtn" type="button" class="btn btn-outline-light btn-lg"
+      onkeypress="weatherUpdate(searchtext.value)">Search</button>
+    <button id="geobtn" type="button" class="btn btn btn-outline-light btn-lg" onclick="geoLocation()"> <img id="btnimg"
+        src="Assests/location.png"> </button>
+  </div>
 
-<!--------------------------------Weather History Body-------------------------------->
-<section id="historysection">
+  <!----------------------------------Navigation Pane---------------------------------->
+  <div class="navigationbar">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <div class="navpane">
+            <ul class="nav nav-pills nav-fill">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#forecastsection">Weather Forecast</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#historysection">Weather History</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/Chanisaunique/Weather_App_1.0" target="_blank">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<div class="forecastweather">
-  <br><br>
-    <p id="titleh">Past 7 Days Weather History</p>
+  <!----------------------------------Current Weather Body---------------------------------->
+  <section id="home"></section>
+
+  <div class="weather" id="home">
+    <div class="details">
+      <img id="weathericon" src="Assests/rainy.png">
+      <p class="condition">Raining</p>
+      <p class="temp">35°C</p>
+
+      <div class="container text-center feelstext">
+        <div class="row">
+          <div class="col">
+            <p class="feelstext">Feels like :</p>
+          </div>
+          <div class="col">
+            <p class="feels">37°C</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="city">Panadura</p>
+
+      <div class="winddetails">
+        <div class="container text-center wdetails">
+          <div class="row">
+            <div class="col">
+              <img id="humidity" src="Assests/humidity.png">
+              <p class="humidtytext">15%</p>
+            </div>
+            <div class="col">
+              <img id="wind" src="Assests/wind.png">
+              <p class="windtext">18Km/h</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <p class="humidty">Humidty</p>
+            </div>
+            <div class="col">
+              <p class="wind speed">Wind Speed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--------------------------------Forecast Weather Body-------------------------------->
+  <section id="forecastsection"></section>
+
+  <div class="forecastweather">
+    <br><br><br><br><br><br><br><br>
+    <p id="titlef">Weather Forecast</p>
+
     <div class="container text-center" id="forecastbox">
       <br><br>
+      <div class="row" id="daysrow">
+        <div class="col">
+          <p class="day1">Day 1</p>
+        </div>
+        <div class="col">
+          <p class="day2">Day </p>
+        </div>
+      </div>
+
+      <!-------------------------------------------------->
+      <br>
+      <div class="row" id="iconrow">
+        <div class="col" id="icon1">
+          <img src="Assests/cloudy-512.png" id="day1icon" name="day1icon">
+        </div>
+        <div class="col" id="icon2">
+          <img src="Assests/cloudy-512.png" id="day2icon" name="day2icon">
+        </div>
+
+      </div>
+
+      <div class="row" id="condrow">
+        <div class="col">
+          <p class="day1cond">Raining</p>
+        </div>
+        <div class="col">
+          <p class="day2cond">Sunny</p>
+        </div>
+
+      </div>
+      <!-------------------------------------------------->
+      <br>
+      <div class="row" id="temprow">
+        <div class="col">
+          <p class="day1temp">35°C</p>
+        </div>
+        <div class="col">
+          <p class="day2temp">35°C</p>
+        </div>
+
+      </div>
+      <!-------------------------------------------------->
+
+      <div class="row" id="humidityrow">
+        <div class="col">
+          <p class="day1hum">57%</p>
+        </div>
+        <div class="col">
+          <p class="day2hum">57%</p>
+        </div>
+
+      </div>
+      <!-------------------------------------------------->
+
+      <div class="row" id="windrow">
+        <div class="col">
+          <p class="day1wind">17km/h</p>
+        </div>
+        <div class="col">
+          <p class="day2wind">17km/h</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!--------------------------------Weather History Body-------------------------------->
+  <section id="historysection">
+
+    <div class="forecastweather">
+      <br><br>
+      <p id="titleh">Past 7 Days Weather History</p>
+      <div class="container text-center" id="forecastbox">
+        <br><br>
         <div class="row" id="hdaysrow">
           <div class="col">
             <p class="hday1">Day 1</p>
           </div>
           <div class="col">
-            <p class="hday2">Day 2 </p> 
+            <p class="hday2">Day 2 </p>
           </div>
           <div class="col">
-            <p class="hday3">Day 3</p> 
+            <p class="hday3">Day 3</p>
           </div>
           <div class="col">
-            <p class="hday4">Day 4</p> 
+            <p class="hday4">Day 4</p>
           </div>
           <div class="col">
             <p class="hday5">Day 5</p>
@@ -238,55 +245,55 @@
           </div>
         </div>
         <!-------------------------------------------------->
-          <div class="row" id="hcondrow">
-            <div class="col">
-              <p class="hday1cond">Raining</p>
-            </div>
-            <div class="col">
-              <p class="hday2cond">Sunny</p>
-            </div>
-            <div class="col">
-              <p class="hday3cond">Raining</p>
-            </div>
-            <div class="col">
-              <p class="hday4cond">Sunny</p>
-            </div>
-            <div class="col">
-              <p class="hday5cond">Raining</p>
-            </div>
-            <div class="col">
-              <p class="hday6cond">Sunny</p>
-            </div>
-            <div class="col">
-              <p class="hday7cond">Raining</p>
-            </div>
+        <div class="row" id="hcondrow">
+          <div class="col">
+            <p class="hday1cond">Raining</p>
           </div>
+          <div class="col">
+            <p class="hday2cond">Sunny</p>
+          </div>
+          <div class="col">
+            <p class="hday3cond">Raining</p>
+          </div>
+          <div class="col">
+            <p class="hday4cond">Sunny</p>
+          </div>
+          <div class="col">
+            <p class="hday5cond">Raining</p>
+          </div>
+          <div class="col">
+            <p class="hday6cond">Sunny</p>
+          </div>
+          <div class="col">
+            <p class="hday7cond">Raining</p>
+          </div>
+        </div>
         <!-------------------------------------------------->
         <br>
-          <div class="row" id="htemprow">
-            <div class="col">
-              <p class="hday1temp">35°C</p>
-            </div>
-            <div class="col">
-              <p class="hday2temp">35°C</p>
-            </div>
-            <div class="col">
-              <p class="hday3temp">35°C</p>
-            </div>
-            <div class="col">
-              <p class="hday4temp">35°C</p>
-            </div>
-            <div class="col">
-              <p class="hday5temp">35°C</p>
-            </div>
-            <div class="col">
-              <p class="hday6temp">35°C</p>
-            </div>
-            <div class="col">
-              <p class="hday7temp">35°C</p>
-            </div>
+        <div class="row" id="htemprow">
+          <div class="col">
+            <p class="hday1temp">35°C</p>
           </div>
-          <!-------------------------------------------------->
+          <div class="col">
+            <p class="hday2temp">35°C</p>
+          </div>
+          <div class="col">
+            <p class="hday3temp">35°C</p>
+          </div>
+          <div class="col">
+            <p class="hday4temp">35°C</p>
+          </div>
+          <div class="col">
+            <p class="hday5temp">35°C</p>
+          </div>
+          <div class="col">
+            <p class="hday6temp">35°C</p>
+          </div>
+          <div class="col">
+            <p class="hday7temp">35°C</p>
+          </div>
+        </div>
+        <!-------------------------------------------------->
         <div class="row" id="hhumidityrow">
           <div class="col">
             <p class="hday1hum">57%</p>
@@ -335,20 +342,21 @@
           </div>
         </div>
       </div>
-</div>
-</section>
+    </div>
+  </section>
 
-<!---------------------------------Script----------------------------------->
-<script>
-    var input=document.getElementById("searchtext");
+  <!---------------------------------Script----------------------------------->
+  <script>
+    var input = document.getElementById("searchtext");
 
-    input.addEventListener("keypress",function(event){
-    if(event.key === "Enter"){
+    input.addEventListener("keypress", function (event) {
+      if (event.key === "Enter") {
         event.preventDefault();
         document.getElementById("sebtn").click();
-    }
-});
-</script>
+      }
+    });
+  </script>
 
 </body>
+
 </html>
