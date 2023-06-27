@@ -1,40 +1,38 @@
 const apiKey="49a66178439b4560bd661234231605";
 
 const searchWrapper=document.querySelector(".search-input");
-const inputBox=searchWrapper.querySelector("input");
-const suggBox=searchWrapper.querySelector(".autocom-box");
+const inputBox=document.getElementById("#searchtext");
+const suggBox=document.getElementById("#autocombobox");
 
 
-async function searchLocation(city){
-    const Searchresponse=await fetch('https://api.weatherapi.com/v1/search.json?key='+ apiKey +'&q=' + city +'&days=5');
-    var searchData=await Searchresponse.json();
+// async function searchLocation(city){
+//     const Searchresponse=await fetch('https://api.weatherapi.com/v1/search.json?key='+ apiKey +'&q=' + city +'&days=5');
+//     var searchData=await Searchresponse.json();
 
-    let suggestions=[];
-    let empArray=[];
+//     let suggestions=[];
+//     let empArray=[];
 
-    for (let i = 0; i <= 4; i++) {
-      console.log(searchData[i].name);
+//     for (let i = 0; i <= 4; i++) {
+//       console.log(searchData[i].name);
 
-      suggestions[i]=searchData[i].name;
+//       suggestions[i]=searchData[i].name;
   
-      empArray[i]='<li>'+ suggestions[i] +'</li>';
+//       empArray[i]='<li>'+ suggestions[i] +'</li>';
     
-      console.log(empArray);
+//       console.log(empArray);
 
-    }
-    showSuggestion(empArray);
-}
+//     }
+//     showSuggestion(empArray);
+// }
 
-function showSuggestion(list){
-  let listData;
-  if(!list.length){
-  }else{
-    listData=list.join('');
-
-  }
-
-
-}
+// async function showSuggestion(list){
+//   let listData;
+//   if(!list.length){
+//   }else{
+//     listData=list.join('');
+//   }
+//   suggBox.innerHTML=listData;
+// }
 
 async function weatherUpdate(city){
     
@@ -42,7 +40,7 @@ async function weatherUpdate(city){
     var data = await await response.json();
 
     
-    // console.log(data);
+     console.log(data);
 
     // Current Date GET
     const date = new Date();
@@ -57,7 +55,7 @@ async function weatherUpdate(city){
 
     let currentDate = `${currentYear}-${currentMonth}-${currentDay}`;
 
-    // console.log("The current date is " + currentDate); 
+    console.log("The current date is " + currentDate); 
 
     // 7 Days ago Date GET
     const yesterday = new Date();
@@ -82,7 +80,7 @@ async function weatherUpdate(city){
     const historyres=await fetch('https://api.weatherapi.com/v1/history.json?key='+ apiKey +'&q=' + city +'&dt='+past7day +'&end_dt='+currentDate);
     var history = await historyres.json();
 
-    // console.log(history);
+    console.log(history);
 
     document.querySelector(".city").innerHTML= data.location.name;
     document.querySelector(".temp").innerHTML= Math.round(data.current.temp_c) +"°C";
@@ -155,8 +153,8 @@ var conditionTexts = [
     "thunder.png",
     "rainy.png",
     "patchy-rain-thunder.png"
-
   ];
+
   // ------------------------------Forecast weather Icons Set------------------------------
   for (var i = 0; i <= 2; i++) {
     // Get the condition text for the current day

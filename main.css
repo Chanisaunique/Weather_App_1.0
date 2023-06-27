@@ -23,7 +23,7 @@ body::-webkit-scrollbar{
 
 
 /* ------------------------------------Auto Complete Box------------------------------------ */
-.autocom-box{
+/* .autocom-box{
     position: relative;
     max-width: 650px;
     max-height: 350px;
@@ -63,7 +63,7 @@ body::-webkit-scrollbar{
 .search-input.active .autocom-box{
     opacity: 1;
     pointer-events:auto;
-}
+} */
 
 
 /* .search-input .autocom-box li{
