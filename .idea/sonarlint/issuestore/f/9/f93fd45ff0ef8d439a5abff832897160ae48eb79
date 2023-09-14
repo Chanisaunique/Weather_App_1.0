@@ -1,0 +1,42 @@
+
+Kjavascript:S3504
+")Unexpected var, use let or const instead.(îõÜP8çû”©1
+8javascript:S108"Empty block statement.(Á—Í8çû”©1
+ujavascript:S3776%"TRefactor this function to reduce its Cognitive Complexity from 22 to the 15 allowed.(ÇåÅşÿÿÿÿ
+Jjavascript:S3504(")Unexpected var, use let or const instead.(à”›Ùüÿÿÿÿ
+?javascript:S125?"Remove this commented out code.(¥÷§úÿÿÿÿ
+javascript:S2703L"^Add the "let", "const" or "var" keyword to this declaration of "past7day" to make it explicit.(Ö÷—ÿÿÿÿÿÿ
+:javascript:S125M"Remove this commented out code.(ñşÁš
+Jjavascript:S3504Q")Unexpected var, use let or const instead.(¦â£ˆüÿÿÿÿ
+Ejavascript:S3504ƒ")Unexpected var, use let or const instead.(ùïğ~
+Kjavascript:S3504‘")Unexpected var, use let or const instead.(°Û¹şÿÿÿÿ
+Ejavascript:S3504Ÿ")Unexpected var, use let or const instead.(Ú©ÿ
+sjavascript:S2392Ÿ"WConsider moving declaration of 'i' as it is referenced outside current binding context.(Ú©ÿ
+Fjavascript:S3504¡")Unexpected var, use let or const instead.(áı¬—
+|javascript:S2392¡"_Consider moving declaration of 'condition' as it is referenced outside current binding context.(áı¬—
+Kjavascript:S3504¤")Unexpected var, use let or const instead.(Ã¬›òúÿÿÿÿ
+}javascript:S2392¤"[Consider moving declaration of 'index' as it is referenced outside current binding context.(Ã¬›òúÿÿÿÿ
+;javascript:S125¥"Remove this commented out code.(£˜æñ
+Kjavascript:S3504§")Unexpected var, use let or const instead.(ßÃóøÿÿÿÿ
+€javascript:S2392§"^Consider moving declaration of 'imageSrc' as it is referenced outside current binding context.(ßÃóøÿÿÿÿ
+;javascript:S125¨"Remove this commented out code.(¥›û
+Fjavascript:S3504ª")Unexpected var, use let or const instead.(öôñÒ
+zjavascript:S2392ª"]Consider moving declaration of 'dayIcon' as it is referenced outside current binding context.(öôñÒ
+@javascript:S125«"Remove this commented out code.(¤õÓØıÿÿÿÿ
+Fjavascript:S3504µ")Unexpected var, use let or const instead.(ù¬­ì
+4javascript:S2814µ"'i' is already defined.(ù¬­ì
+Ejavascript:S3504·")Unexpected var, use let or const instead.(š´®5
+;javascript:S2814·"'condition' is already defined.(š´®5
+Kjavascript:S3504º")Unexpected var, use let or const instead.(Ã¬›òúÿÿÿÿ
+=javascript:S2814º"'index' is already defined.(Ã¬›òúÿÿÿÿ
+Kjavascript:S3504¼")Unexpected var, use let or const instead.(ßÃóøÿÿÿÿ
+@javascript:S2814¼"'imageSrc' is already defined.(ßÃóøÿÿÿÿ
+;javascript:S125½"Remove this commented out code.(¥›û
+Kjavascript:S3504¿")Unexpected var, use let or const instead.(ù °£úÿÿÿÿ
+?javascript:S2814¿"'dayIcon' is already defined.(ù °£úÿÿÿÿ
+@javascript:S125À"Remove this commented out code.(¤õÓØıÿÿÿÿ
+;javascript:S125Ö"Remove this commented out code.(„³‚Á
+;javascript:S125Û"Remove this commented out code.(˜ùÖí
+Kjavascript:S3504İ")Unexpected var, use let or const instead.(œ¨îÖşÿÿÿÿ
+Zjavascript:S1481İ"8Remove the declaration of the unused 'dataset' variable.(œ¨îÖşÿÿÿÿ
+Wjavascript:S1854İ"5Remove this useless assignment to variable "dataset".(œ¨îÖşÿÿÿÿ
