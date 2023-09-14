@@ -5,34 +5,34 @@ const inputBox=document.getElementById("#searchtext");
 const suggBox=document.getElementById("#autocombobox");
 
 
-// async function searchLocation(city){
-//     const Searchresponse=await fetch('https://api.weatherapi.com/v1/search.json?key='+ apiKey +'&q=' + city +'&days=5');
-//     var searchData=await Searchresponse.json();
+ async function searchLocation(city){
+     const Searchresponse=await fetch('https://api.weatherapi.com/v1/search.json?key='+ apiKey +'&q=' + city +'&days=5');
+     var searchData=await Searchresponse.json();
 
-//     let suggestions=[];
-//     let empArray=[];
+     let suggestions=[];
+     let empArray=[];
 
-//     for (let i = 0; i <= 4; i++) {
-//       console.log(searchData[i].name);
+     for (let i = 0; i <= 4; i++) {
+       console.log(searchData[i].name);
 
-//       suggestions[i]=searchData[i].name;
+       suggestions[i]=searchData[i].name;
   
-//       empArray[i]='<li>'+ suggestions[i] +'</li>';
+       empArray[i]='<li>'+ suggestions[i] +'</li>';
     
-//       console.log(empArray);
+       console.log(empArray);
 
-//     }
-//     showSuggestion(empArray);
-// }
+     }
+     showSuggestion(empArray);
+ }
 
-// async function showSuggestion(list){
-//   let listData;
-//   if(!list.length){
-//   }else{
-//     listData=list.join('');
-//   }
-//   suggBox.innerHTML=listData;
-// }
+ async function showSuggestion(list){
+   let listData;
+   if(!list.length){
+   }else{
+     listData=list.join('');
+   }
+   suggBox.innerHTML=listData;
+ }
 
 async function weatherUpdate(city){
     
@@ -74,7 +74,7 @@ async function weatherUpdate(city){
       }
       
       past7day=formatDate(yesterday);
-      // console.log("The past 7 date is " + past7day); 
+      // console.log("The past 7 date is " + past7day);
 
 
     const historyres=await fetch('https://api.weatherapi.com/v1/history.json?key='+ apiKey +'&q=' + city +'&dt='+past7day +'&end_dt='+currentDate);
